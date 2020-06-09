@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>thumbnail</layoutype>
+<fanart></fanart>
+<SetViewMode>1</SetViewMode>
+
+<dir>
+    <name>[COLOR red]welcome To[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<dir>
+    <name>[COLOR red]brought to you by Karnage of dark avengers[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<item>
+<title>we do not host these movies they are hosted elsewhere </title>
+<link>$doregex[hd]</link>
+<regex>
+<name>[COLOR red]hd[/COLOR]</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://wikiplus.org/content/xxx/videos/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|avi|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://wikiplus.org/content/xxx/videos/</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+<name> [COLOR white] xxx[/COLOR]</name>
+<link>http://wikiplus.org/content/xxx/videos/</link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+
+<item>
+<title>we do not host these movies they are hosted elsewhere </title>
+<link>$doregex[hd]</link>
+<regex>
+<name>[COLOR red]hd[/COLOR]</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://snubnose.brontosaurus.org/burning%20a/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|avi|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://snubnose.brontosaurus.org/burning%20a/</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+<name> [COLOR white]XXX Parody[/COLOR]</name>
+<link>http://snubnose.brontosaurus.org/burning%20a/</link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>

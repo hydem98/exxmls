@@ -1,0 +1,14 @@
+<plugin>
+    <name></name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<plugin>
+    <name></name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+
+<name></name>

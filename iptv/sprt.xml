@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>fuckOFF</layoutype>
+<fanart>https://s20.postimg.org/lxjjs1nsd/fanart.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+
+<item>
+<title>[COLOR red]Ace Stream Football[/COLOR] [COLOR white](Plexus)[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<thumbnail>https://uappexplorer.com/api/icon/1e24523c9ab8b9a6a2f98ee1b359d553/acestreamplayer.vs.png</thumbnail>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param1]</title>
+<link>$doregex[geturl]</link>
+<thumbnail>https://uappexplorer.com/api/icon/1e24523c9ab8b9a6a2f98ee1b359d553/acestreamplayer.vs.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client
+    import re
+    r = []
+    u = client.request('http://www.livefootballol.me/live-football-streaming-2016.html')
+    u = re.compile('(\d{2}/\d{2}/\d{4} CET).+?<list (.+?)</list>', re.MULTILINE|re.DOTALL).findall(u)[:2]
+    for i in u:
+        try:
+            li = client.parseDOM(i[1], 'li')
+            li = [(re.sub('<.+?>|</.+?>|\n', '', l).strip(), client.parseDOM(l, 'a', ret='href')) for l in li]
+            li = [(l[0], l[1][0]) for l in li if len(l[1]) > 0]
+            li = [l for l in li if not 'unibet.php' in l[1]]
+            r.append(('[COLOR white][B]%s[/B][/COLOR]' % i[0], ''))
+            for l in li: r.append(l)
+        except:
+            pass
+    return r
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>geturl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist.param2]'):
+    from resources.lib.modules import client
+    import urlparse, urllib, re, xbmc, xbmcgui
+
+    page = urlparse.urljoin('http://www.livefootballol.me', url)
+
+    r = client.request(page)
+    r = r.replace('\n', '').split('<tr>')
+    r = [re.findall('<td>(.+?)</td>.+?<a href="(.+?)">(.+?)</a>', i) for i in r]
+    r = [i[0] for i in r if len(i) > 0]
+    r = [i for i in r if 'acestream' in i[1].lower()]
+    r = [('%s %s' % (i[0], i[2]) if not 'nbsp' in i[0] else i[2], i[1]) for i in r]
+    r = [(re.sub('<.+?>|</.+?>|ACESTREAM', '', i[0].upper()).strip(), i[1]) for i in r]
+
+    r0 = [i[0] for i in r] ; r1 = [i[1] for i in r]
+    if not r: return
+
+    label = xbmc.getInfoLabel('listitem.label')
+    select = xbmcgui.Dialog().select(label.upper(), r0)
+    if select == -1: return
+
+    url = client.request(r[select][1])
+    url = re.findall('"acestream://(.+?)"', url)[0]
+    url = 'plugin://program.plexus/?mode=1&url=acestream://%s&name=%s' % (url, urllib.quote_plus(label))
+    return url
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<title>Sky Sport 1</title>
+<link>
+<sublink>http://193.200.164.134:56019/live/online/tv/1760.ts|User-Agent=ONLINETVCLIENT_X60000_X25000_X4000MEGA_V1770</sublink>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/178.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports1.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports1-2.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports1-3.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports1.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>Sky Sport 2</title>
+<link>
+<sublink>http://193.200.164.134:56019/live/online/tv/1761.ts|User-Agent=ONLINETVCLIENT_X60000_X25000_X4000MEGA_V1770</sublink>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/259.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports2.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports2-2.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports2-3.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports2.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>Sky Sport 3</title>
+<link>
+<sublink>http://193.200.164.134:56019/live/online/tv/1762.ts|User-Agent=ONLINETVCLIENT_X60000_X25000_X4000MEGA_V1770</sublink>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/258.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports3.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports3-2.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports3-3.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports3.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>Sky Sport 4</title>
+<link>
+<sublink>http://193.200.164.134:56019/live/online/tv/1763.ts|User-Agent=ONLINETVCLIENT_X60000_X25000_X4000MEGA_V1770</sublink>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/257.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports4.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports4-2.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports1-4.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports4.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>Sky Sport 5</title>
+<link>
+<sublink>http://193.200.164.134:56019/live/online/tv/1764.ts|User-Agent=ONLINETVCLIENT_X60000_X25000_X4000MEGA_V1770</sublink>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/256.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports5.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports5-2.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports5-3.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports5.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>Sky Sports News</title>
+<link>
+<sublink>http://193.200.164.134:56019/live/online/tv/153.ts|User-Agent=ONLINETVCLIENT_X60000_X25000_X4000MEGA_V1770</sublink>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/255.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysportsnews.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysportsnews-2.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysportsnews-3.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysportsnews.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>Sky Sports F1</title>
+<link>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/169.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysportsf1.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysportsf1-2.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysportsf1.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>Sky Sports Cricket</title>
+<link>
+<sublink>http://www.liveonlinetv247.info/embed/skysportscricket.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysportscricket-2.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysportscricket-3.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysportscricket.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>Sky Sports Box Office</title>
+<link>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/271.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysportsboxoffice.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysportsboxoffice.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>BT Sport 1</title>
+<link>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/267.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/btsport1.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/btsport1-2.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport1.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>BT Sport 2</title>
+<link>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/266.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/btsport2.php?width=650&height=480</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/btsport2-2.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport2.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>BT Sport Europe</title>
+<link>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/264.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/btsporteurope.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsporteurope.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>BT Sport ESPN</title>
+<link>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/265.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/btsportespn.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsportespn.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>ESPN</title>
+<link>
+<sublink>http://iptvreseller.xyz:1234/live/www.iptvrestream.net/eeGY0TLlU6/347.ts|User-Agent=fuck1</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/espn.php?width=650&height=480</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/espn.png</thumbnail>
+<fanart>https://s20.postimg.org/5eos453ql/hd_fantasy_wallpaper_1280x800_0912021.jpg</fanart>
+</item>
+
+<item>
+<title>Pac Mountain 1080P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=Pac Mountain&amp;url=http://xrxs.net/video/live-p12moun-4728.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-mountain-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC National 720P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC National&amp;url=http://xrxs.net/video/live-p12netw-2328.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-network-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Arizona) 720P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC-12 (Arizona)&amp;url=http://xrxs.net/video/live-p12ariz-2328.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-arizona-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Arizona) 1080P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC-12 (Arizona)&amp;url=http://xrxs.net/video/live-p12ariz-4728.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-arizona-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Bay Area) 720P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC-12 (Bay Area)&amp;url=http://xrxs.net/video/live-p12baya-2328.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-bayarea-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Bay Area) 1080P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC-12 (Bay Area)&amp;url=http://xrxs.net/video/live-p12baya-4728.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-bayarea-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Los Angeles) 720P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC-12 (Los Angeles)&amp;url=http://xrxs.net/video/live-p12losa-2328.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-losangeles-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Oregon) 720P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC-12 (Oregon)&amp;url=http://xrxs.net/video/live-p12oreg-2328.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-oregon-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Oregon) 1080P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC-12 (Oregon)&amp;url=http://xrxs.net/video/live-p12oreg-4728.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-oregon-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Washington) 720P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC-12 (Washington)&amp;url=http://xrxs.net/video/live-p12wash-2328.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-washington-logo.png</thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Washington) 1080P</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=PAC-12 (Washington)&amp;url=http://xrxs.net/video/live-p12wash-4728.m3u8</link>
+<thumbnail>http://static.pac-12.com/images/logos/pac-12-washington-logo.png</thumbnail>
+</item>
+
+<item>
+<title>NFL Now</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=NFL Now&amp;url=https://svglive3-event.level3.nfl.com/nflent3/live/now/NFLNOW_1200k.m3u8</link>
+<thumbnail>https://image.roku.com/blog/wp-content/uploads/2014/08/nfl-now.jpg</thumbnail>
+</item>
+
+<item>
+<title>NFL Network</title>
+<link>http://bigsports.me/watch/58/nfl-network-live-stream.html</link>
+<thumbnail>http://bigsports.me/images/nfl.jpg</thumbnail>
+</item>

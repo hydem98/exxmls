@@ -1,0 +1,11 @@
+http://151.80.22.39:800//get.php?username=bo2&password=bo2&type=m3u
+http://system.fpiptv.com:8080/get.php?username=WTl1qXy1fu&password=vZ5XRyHYK4&type=m3u
+http://ksportiptv.com:1557/get.php?username=Sergio&password=Sergio&type=m3u
+http://185.40.35.210:8000/playlist.m3u8
+http://217.182.192.199:25461/get.php?username=update&password=appi&type=m3u
+http://185.95.109.144:8125/playlist.m3u8
+http://sys.dx10.org:8085/get.php?username=iQsIOrmm4O&password=BdbNBVhcqt&type=m3u
+http://system.fpiptv.com:8080/get.php?username=WTl1qXy1fu&password=vZ5XRyHYK4&type=m3u
+http://tv.share1.la/get.php?username=bZcJ8Ghudq&password=channel&type=m3u
+http://geantiptv.ddns.net:61555/get.php?username=lGMkMb6Aw9&password=OrzTMHsMKh&type=m3u
+http://gigasip.dyndns.tv:3838/get.php?username=technocomskype&password=redmosdns&type=m3u

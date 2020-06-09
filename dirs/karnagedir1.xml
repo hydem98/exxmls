@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+
+
+<item>
+<title>[COLOR lightcoral]Latest[/COLOR][COLOR khaki] Movies[/COLOR][COLOR azure](Automated)[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+        <title>[makelist.param3]: [makelist.param4]</title>
+        <link>$doregex[play]</link>
+        <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client,cache,workers 
+    import re
+
+    class page:
+        def run(self, r):
+            threads = [] ; self.r = [] ; r = [(r.index(i)+1, i) for i in r]
+            for i in r: threads.append(workers.Thread(self.request, i))
+            [i.start() for i in threads] ; [i.join() for i in threads]
+            return ''.join([str(i[1]) for i in sorted(self.r, key=lambda x: x[0])])
+        def request(self, i):
+            self.r += [(i[0], str(client.request(i[1])))]
+
+    url = []
+    for i in range(1, 6): url += ['http://movie4u.cc/movies/page/' + str(i) + '/?get=movies']
+    main = cache.get(page().run, 0, url)
+    link = client.parseDOM(main, 'article', attrs = {'class': 'item movies'})
+    link = [(client.parseDOM(i, 'a', ret='href')  , client.parseDOM(i, 'img', ret='src') , client.parseDOM(i, 'img', ret='alt') , client.parseDOM(i, 'span', attrs = {'class': 'quality'})) for i in link]
+    link = [(i[0][0], i[1][0], i[2][0], i[3][0]) for i in link] 
+    return link
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>play</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client
+    import re
+    html = client.request('[makelist.param1]')
+    express1 = 'file:"(.+?)",type:"mp4"'
+    express2 = 'metaframe rptss" src="(.+?)"'
+    links = re.compile(express1, re.MULTILINE|re.DOTALL).findall(html)
+    if not links: links = re.compile(express2, re.MULTILINE|re.DOTALL).findall(html)
+    links = links[0]
+    return links
+]]></expres>
+<page></page>
+</regex>	
+</item>
+
+<item>
+<title> http://www.goalsarena.org/tr</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://www.goalsarena.org/templates/goalsarena/images/logo.png.pagespeed.ce.5zXMeaMkJW.png</thumbnail>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+   <title>[COLOR white]([makelist.param1])[/COLOR][COLOR gold] [makelist.param2][/COLOR]</title>
+   <link>$doregex[getUrl]</link>
+   <thumbnail>http://www.goalsarena.org/templates/goalsarena/images/logo.png.pagespeed.ce.5zXMeaMkJW.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[title="(\d+.*?)\s-\s(.*?)".href="(.*?)"]]></expres>
+<page>http://www.goalsarena.org/tr</page>
+<referer>http://www.goalsarena.org/</referer>
+<agent>Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import requests,re
+def GetLSProData(page_data,Cookie_Jar,m):
+  ua='Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04'
+  link=re.findall('data-config="(.*?)"',page_data)[0]
+  url='http:' + link
+  source=requests.get(url,headers={'User-Agent':ua,'Referer':'[makelist.param3]','Accept':'/*','Connection':'keep-alive'}).text
+  f4m=re.findall('"f4m":".+?\/\/(.*?)"',source)[0]
+  url='http://' + f4m
+  source=requests.get(url,headers={'User-Agent':ua,'Referer':'[makelist.param3]','Accept':'/*','Connection':'keep-alive'}).text
+  return 'http://' + re.findall('url=".+\/\/(.*?)"',source)[0]
+]]></expres>
+<page>[makelist.param3]</page>
+<referer>http://www.goalsarena.org/</referer>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>[B]Top Rated Tv Shows[/B]</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://cosmix.offshorepastebin.com/Weblinks/icons/RDlatestepisodes.png</thumbnail>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title>[makelist.param3]</title>
+        <link>$doregex[episodes]</link>
+        <thumbnail>[makelist.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import cache,client,workers
+    import re
+
+    html = client.request('http://www.tvzion.com/watch-tv-series-online/1?orderby=popular&pagesize=500')
+    express = 'data-original="(.+?)".+?<div class="row BottomData">.+?<a class="col-sm-12 text-left Title" itemprop="url" href="(.+?)"><h2>Watch <span itemprop="name">(.+?)</span> online free</h2></a>'
+    list = re.compile(express, re.MULTILINE|re.DOTALL).findall(html)
+    return list
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>episodes</name>
+  <listrepeat><![CDATA[
+        <title>[episodes.param2]</title>
+        <link>$doregex[playurl]</link>
+        <thumbnail>[makelist.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client,control
+    import re,urllib
+
+    html = client.request('[makelist.param2]')
+    express = '<a itemprop="url" href="(.+?)" title="(.+?)">'
+    list = re.compile(express, re.MULTILINE|re.DOTALL).findall(html)
+    return list
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>playurl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client,control
+    import re,urllib
+
+    html = client.request('[episodes.param1]')
+    express = '<link rel="video_src" href="(.+?)"'
+    list = re.compile(express, re.MULTILINE|re.DOTALL).findall(html)[0]
+    main = list
+    main = client.request(main)
+    openload = '<meta name="og:url" content="(.+?)">'
+    link = re.compile(openload, re.MULTILINE|re.DOTALL).findall(main)[0]
+    return link
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<title>[B][COLOR white]SEARCH[/COLOR]: TV SHOWS[/B]</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://cosmix.offshorepastebin.com/Weblinks/icons/searchtvshows.png</thumbnail> 
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+        <title>[makelist.param3]</title>
+        <link>$doregex[episodes]</link>
+        <thumbnail>[makelist.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client
+    import re, urllib, xbmc, xbmcgui
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+
+    w = xbmcgui.Window(10000) ; p = 'plugin.video.jizzplanet.yap.search'
+    t = xbmc.getInfoLabel('listitem.label')
+    if t == '':
+        q = w.getProperty(p)
+    else:
+        k = xbmc.Keyboard('', t) ; k.doModal()
+        q = k.getText() if k.isConfirmed() else None
+        if (q == None or q == ''): return
+        w.setProperty(p, q)
+
+    if (q == None or q == ''): return
+
+
+    html = ''
+    html += client.request('http://www.tvzion.com/watch-tv-series-online/keyword-streamable/%s-0/1' % urllib.quote_plus(q))
+    express = 'data-original="(.+?)".+?<div class="row BottomData">.+?<a class="col-sm-12 text-left Title" itemprop="url" href="(.+?)"><h2>Watch <span itemprop="name">(.+?)</span> online free</h2></a>'
+    list = re.compile(express, re.MULTILINE|re.DOTALL).findall(html)
+    return list
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>episodes</name>
+  <listrepeat><![CDATA[
+        <title>[episodes.param2]</title>
+        <link>$doregex[playurl]</link>
+        <thumbnail>[makelist.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client,control
+    import re,urllib
+
+    html = client.request('[makelist.param2]')
+    express = '<a itemprop="url" href="(.+?)" title="(.+?)">'
+    list = re.compile(express, re.MULTILINE|re.DOTALL).findall(html)
+    return list
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>playurl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client,control
+    import re,urllib
+
+    html = client.request('[episodes.param1]')
+    express = '<link rel="video_src" href="(.+?)"'
+    list = re.compile(express, re.MULTILINE|re.DOTALL).findall(html)[0]
+    main = list
+    main = client.request(main)
+    openload = '<meta name="og:url" content="(.+?)">'
+    link = re.compile(openload, re.MULTILINE|re.DOTALL).findall(main)[0]
+    return link
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<title>[B]Top IMDB Ratings[/B]</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://cosmix.offshorepastebin.com/Weblinks/icons/popularmovies.png</thumbnail>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+        <title>[makelist.param3] : [makelist.param4]</title>
+        <link>$doregex[geturl]</link>
+        <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client,cache,workers 
+    import re
+
+    class page:
+        def run(self, r):
+            threads = [] ; self.r = [] ; r = [(r.index(i)+1, i) for i in r]
+            for i in r: threads.append(workers.Thread(self.request, i))
+            [i.start() for i in threads] ; [i.join() for i in threads]
+            return ''.join([str(i[1]) for i in sorted(self.r, key=lambda x: x[0])])
+        def request(self, i):
+            self.r += [(i[0], str(client.request(i[1])))]
+
+    url = []
+    for i in range(1, 8): url += ['https://123movie.tech/movie/topimdb/movie/' + str(i)]
+    html = cache.get(page().run, 0, url)
+    link = client.parseDOM(html, 'div', attrs = {'class': 'ml-item'})
+    link = [(client.parseDOM(i, 'a', ret='href') , client.parseDOM(i, 'img', ret='data-original') , client.parseDOM(i, 'img', ret='alt') , client.parseDOM(i, 'span', attrs = {'class': 'mli-quality'})) for i in link]
+    link = [(i[0][0], i[1][0], i[2][0], i[3][0]) for i in link if i[0] and i[1] and i[2] and i[3]]
+    link = [(client.replaceHTMLCodes(i[0]).encode('utf-8'), client.replaceHTMLCodes(i[1]).encode('utf-8'), client.replaceHTMLCodes(i[2]).encode('utf-8'), client.replaceHTMLCodes(i[3]).encode('utf-8')) for i in link]
+    return link
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>geturl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist.param1]'):
+    from resources.lib.sources import onemovies
+    sources = onemovies.source().sources(url, [], [])
+    for i in sources:
+        url = onemovies.source().resolve(i['url'])
+        if not url == None: return url
+    return url
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<name>[B]1080p Movies Latest[/B]</name>
+<thumbnail>http://cosmix.offshorepastebin.com/Weblinks/icons/movieshd.png</thumbnail>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param3]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>[makelist.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client
+    import re
+
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+	
+    html = ''
+    html += client.request('http://1080pmovies.org/')
+    html += client.request('http://1080pmovies.org/?paged=2')
+    html += client.request('http://1080pmovies.org/?paged=3')
+    html += client.request('http://1080pmovies.org/?paged=4')
+    html += client.request('http://1080pmovies.org/?paged=5')
+    html += client.request('http://1080pmovies.org/?paged=6')
+    html += client.request('http://1080pmovies.org/?paged=7')
+
+    html = re.sub(r'[^\x00-\x7F]+', ' ', html)
+    html = re.sub('&#[0-9]+;', '\'', html)
+    html = html.replace('&quot'+';', '"')
+    html = html.replace('&amp;', '&') 
+
+    express = 'src="(.+?)".+?\n\n.+?\n.+?h1 class="entry-title"><a href="(.+?)".+?bookmark">(.+?)<\/a>'
+
+    links = re.compile(express, re.MULTILINE|re.DOTALL).findall(html)
+
+    return links
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[makelist2.param1]</title>
+<link>[makelist2.param2]</link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[<h2 class="tabtitle">(.+?)<.*\n.*\n.+iframe src="(.+?)"]]></expres>
+<page>[makelist.param2]</page>
+</regex>
+</item>
+
+<item>
+<title>Ace Stream Football (Plexus)</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/tv/PLEXFOOTY.png</thumbnail>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param1]</title>
+<link>$doregex[geturl]</link>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/tv/PLEXFOOTY.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client
+    import re
+    r = []
+    u = client.request('http://www.livefootballol.me/live-football-streaming-2016.html')
+    u = re.compile('(\d{2}/\d{2}/\d{4} CET).+?<list (.+?)</list>', re.MULTILINE|re.DOTALL).findall(u)[:2]
+    for i in u:
+        try:
+            li = client.parseDOM(i[1], 'li')
+            li = [(re.sub('<.+?>|</.+?>|\n', '', l).strip(), client.parseDOM(l, 'a', ret='href')) for l in li]
+            li = [(l[0], l[1][0]) for l in li if len(l[1]) > 0]
+            li = [l for l in li if not 'unibet.php' in l[1]]
+            r.append(('[COLOR red][B]%s[/B][/COLOR]' % i[0], ''))
+            for l in li: r.append(l)
+        except:
+            pass
+    return r
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>geturl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist.param2]'):
+    from resources.lib.modules import client
+    import urlparse, urllib, re, xbmc, xbmcgui
+
+    page = urlparse.urljoin('http://www.livefootballol.me', url)
+
+    r = client.request(page)
+    r = r.replace('\n', '').split('<tr>')
+    r = [re.findall('<td>(.+?)</td>.+?<a href="(.+?)">(.+?)</a>', i) for i in r]
+    r = [i[0] for i in r if len(i) > 0]
+    r = [i for i in r if 'acestream' in i[1].lower()]
+    r = [('%s %s' % (i[0], i[2]) if not 'nbsp' in i[0] else i[2], i[1]) for i in r]
+    r = [(re.sub('<.+?>|</.+?>|ACESTREAM', '', i[0].upper()).strip(), i[1]) for i in r]
+
+    r0 = [i[0] for i in r] ; r1 = [i[1] for i in r]
+    if not r: return
+
+    label = xbmc.getInfoLabel('listitem.label')
+    select = xbmcgui.Dialog().select(label.upper(), r0)
+    if select == -1: return
+
+    url = client.request(r[select][1])
+    url = re.findall('"acestream://(.+?)"', url)[0]
+    url = 'plugin://program.plexus/?mode=1&url=acestream://%s&name=%s' % (url, urllib.quote_plus(label))
+    return url
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+<dir>
+<name>Arrow (2012)</name>
+<meta>
+<content>tvshow</content>
+<imdb>tt2193021</imdb>
+<tvdb>257655</tvdb>
+<tvshowtitle>Arrow</tvshowtitle>
+<year>2012</year>
+</meta>
+<link>-</link>
+<thumbnail>http://thetvdb.com/banners/posters/257655-1.jpg</thumbnail>
+<fanart>http://thetvdb.com/banners/fanart/original/257655-12.jpg</fanart>
+</dir>
+
+<dir>
+<name>The Librarians (2014)</name>
+<meta>
+<content>tvshow</content>
+<imdb>tt3663490</imdb>
+<tvdb>281709</tvdb>
+<tvshowtitle>The Librarians</tvshowtitle>
+<year>2012</year>
+</meta>
+<link>-</link>
+<thumbnail>http://thetvdb.com/banners/posters/281709-1.jpg</thumbnail>
+<fanart>http://thetvdb.com/banners/fanart/original/281709-12.jpg</fanart>
+</dir>
+
+<dir>
+<name>NCIS (2003)</name>
+<meta>
+<content>tvshow</content>
+<imdb>tt0364845</imdb>
+<tvdb>72108</tvdb>
+<tvshowtitle>NCIS: Naval Criminal Investigative Service</tvshowtitle>
+<year>2003</year>
+</meta>
+<link>-</link>
+<thumbnail>http://thetvdb.com/banners/posters/72108-2.jpg</thumbnail>
+<fanart>http://thetvdb.com/banners/fanart/original/72108-12.jpg</fanart>
+</dir>
+
+
+<item>
+<name>NCIS (2003)</name>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>NCIS S[makelist.param1] E[makelist.param2]</title>
+<meta>
+<content>episode</content>
+<imdb>tt0364845</imdb>
+<tvdb>72108</tvdb>
+<tvshowtitle>NCIS: Naval Criminal Investigative Service</tvshowtitle>
+<year>2003</year>
+<title>[makelist.param3]</title>
+<season>[makelist.param1]</season>
+<episode>[makelist.param2]</episode>
+<premiered>0</premiered>
+</meta>
+<link>
+<sublink>search</sublink>
+<sublink>searchsd</sublink>
+</link>
+<thumbnail>http://thetvdb.com/banners/posters/72108-1.jpg</thumbnail>
+<fanart>http://thetvdb.com/banners/fanart/original/72108-9.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+ import requests, re
+ item = 'http://opentuner.is/ncis-naval-criminal-investigative-service-2003/'
+ item = requests.get(item).text
+ item = re.findall('href=.*?/season-(\d*)-episode-(\d*).*?Episode.*?>(.*?)</a>', item)
+ item = [(i[0], i[1], i[2].split('-', 1)[-1].strip()) for i in item][::-1]
+ return item
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>http://thetvdb.com/banners/posters/72108-1.jpg</thumbnail>
+<fanart>http://thetvdb.com/banners/fanart/original/72108-9.jpg</fanart>
+</item>
+
+<item>
+<title>Dr. No (1962)</title>
+<meta>
+<content>movie</content>
+<imdb>tt0055928</imdb>
+<title>Dr. No</title>
+<year>1962</year>
+</meta>
+<link>
+<sublink name="Trying to find the best!">search</sublink>
+<sublink name="Trying to find what else!">searchsd</sublink>
+</link>
+<thumbnail>https://c4.staticflickr.com/8/7007/6630931205_f8a983dc6c_b.jpg</thumbnail>
+<fanart>https://image.tmdb.org/t/p/original/4kCiRECJD67nPqraeVghNrl52PM.jpg</fanart>
+</item>
+
+<item>
+<title>Fifty Shades Darker (2017)</title>
+<meta>
+<content>movie</content>
+<imdb>tt4465564</imdb>
+<title>Fifty Shades Darker</title>
+<year>2017</year>
+</meta>
+<link>
+<sublink name="Trying to find the best!">search</sublink>
+<sublink name="Trying to find what else!">searchsd</sublink>
+</link>
+<thumbnail>https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ5NTk0Njg2N15BMl5BanBnXkFtZTgwNzk5Nzk3MDI@._V1_SY1000_CR0,0,631,1000_AL_.jpg</thumbnail>
+<fanart>https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzOTQ5Mjk5OV5BMl5BanBnXkFtZTgwMzAwODk3MDI@._V1_SY1000_CR0,0,1499,1000_AL_.jpg</fanart>
+</item>
+
+<item>
+<title>John Wick: Chapter 2 (2017)</title>
+<meta>
+<content>movie</content>
+<imdb>tt4425200</imdb>
+<title>John Wick: Chapter 2</title>
+<year>2017</year>
+</meta>
+<link>
+<sublink name="Trying to find the best!">search</sublink>
+<sublink name="Trying to find what else!">searchsd</sublink>
+</link>
+<thumbnail>https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_SY1000_CR0,0,648,1000_AL_.jpg</thumbnail>
+<fanart>https://images-na.ssl-images-amazon.com/images/M/MV5BMTc4OTIyODM0N15BMl5BanBnXkFtZTgwOTA5OTYxMDI@._V1_SX1500_CR0,0,1500,999_AL_.jpg</fanart>
+</item>
+
+<item>
+<title>The Godfather (1972)</title>
+<meta>
+<content>movie</content>
+<imdb>tt4425200</imdb>
+<title>The Godfather</title>
+<year>1972</year>
+</meta>
+<link>
+<sublink name="Trying to find the best!">search</sublink>
+<sublink name="Trying to find what else!">searchsd</sublink>
+</link>
+<thumbnail>https://image.tmdb.org/t/p/original/d4KNaTrltq6bpkFS01pYtyXa09m.jpg</thumbnail>
+<fanart>https://image.tmdb.org/t/p/original/nZWXeeHZmeXEvYlI4GW5VN1nAqm.jpg</fanart>
+</item>
+
+<item>
+<title>Airplane II (1982)</title>
+<meta>
+<content>movie</content>
+<imdb>tt0083530</imdb>
+<title>Airplane II: The Sequel</title>
+<year>1982</year>
+</meta>
+<link>
+<sublink>https://drive.google.com/open?id=1rF_znyEX8tXDLtMD1bQh-yM66p7qf-bE8A</sublink>
+<sublink>search</sublink>
+</link>
+<thumbnail>https://image.tmdb.org/t/p/w300_and_h450_bestv2/pjI6j5sVTxJXuxnr2JM2FgvyFXS.jpg</thumbnail>
+</item>
+
+
+<item>
+<title>Assassin's Creed (2016)</title>
+<meta>
+<content>movie</content>
+<imdb>tt2094766</imdb>
+<title>Assassin's Creed</title>
+<year>2016</year>
+</meta>
+<link>
+<sublink>http://tinklepad.ag/watch-assassins-creed-online-free-73774.html</sublink>
+<sublink>search</sublink>
+</link>
+<thumbnail>https://images-na.ssl-images-amazon.com/images/M/MV5BNzE1OTczNTc1OF5BMl5BanBnXkFtZTgwMzgyMDI3MDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg</thumbnail>
+</item>
+
+
+
+
+
+<item>
+<title>Italian TV Series</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param1]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>https://i.imgsafe.org/844b6aa5bf.jpg</thumbnail>
+<fanart>http://www.panoramaaudiovisual.com/wp-content/uploads/2012/09/Imperium-Rodaje-4-.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    def guardaserie_root(url):
+        from resources.lib.modules import client
+        r = client.request(url)
+        r = client.parseDOM(r, 'div', attrs = {'class': 'bottom-header-category.+?'})[0]
+        r = zip(client.parseDOM(r, 'a', ret='href'), client.parseDOM(r, 'a'))
+        r = [(i[1], i[0]) for i in r if not '-show' in i[0]]
+        r = sorted(r, key=lambda x: x[0].lower())
+        if r: return r
+    from resources.lib.modules import cache
+    url = 'http://www.guardaserie.online/'
+    r = [('[B]Tutti[/B]', url)]
+    r += cache.get(guardaserie_root, 120, url)
+    return r
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[makelist2.param1]</title>
+<link>$doregex[makelist3]</link>
+<thumbnail>[makelist2.param3]</thumbnail>
+<fanart>http://www.panoramaaudiovisual.com/wp-content/uploads/2012/09/Imperium-Rodaje-4-.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist.param2]'):
+    def guardaserie_tvshows(url):
+        from resources.lib.modules import client
+        import re
+        u = client.request(url)
+        if 'category' in url and '/page/2/' in u: u += client.request(url + '/page/2/')
+        if 'category' in url and '/page/3/' in u: u += client.request(url + '/page/3/')
+        r = client.parseDOM(u, 'div', attrs = {'meta-title': '.+?'})
+        r += client.parseDOM(u, 'div', attrs = {'class': 'col-xs-6.+?'})
+        r = [(client.parseDOM(i, 'p', attrs = {'class': 'strongText'}), client.parseDOM(i, 'a', ret='href'), client.parseDOM(i, 'img', ret='src')) for i in r]
+        r = [(i[0][0], i[1][0], i[2][0]) for i in r if i[0] and i[1] and i[2]]
+        r = [(client.replaceHTMLCodes(i[0]), client.replaceHTMLCodes(i[1]), client.replaceHTMLCodes(i[2])) for i in r]
+        r = [(i[0].encode('utf-8'), i[1].encode('utf-8'), i[2].encode('utf-8')) for i in r]
+        r = [(i[0] if not i[0].isdigit() else 'The %s' % i[0], i[1], i[2].replace('/locandina-orizzontale/', '/locandina/')) for i in r]
+        c = [i[1] for i in r] ; c = [x for y,x in enumerate(c) if x not in c[:y]]
+        r = [[x for x in r if i == x[1]][0] for i in c]
+        r = sorted(r, key=lambda x: x[0].lower())
+        return r
+    from resources.lib.modules import cache
+    r = cache.get(guardaserie_tvshows, 120, url)
+    return r
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+<title>[makelist3.param1]</title>
+<link>$doregex[geturl]</link>
+<thumbnail>[makelist3.param3]</thumbnail>
+<fanart>http://www.panoramaaudiovisual.com/wp-content/uploads/2012/09/Imperium-Rodaje-4-.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist2.param2]'):
+    def guardaserie_episodes(url):
+        from resources.lib.modules import client
+        import re
+        r = client.request(url)
+        r = client.parseDOM(r, 'div', attrs = {'class': 'col-xs-6.+?'})
+        r = [(client.parseDOM(i, 'div', attrs = {'class': 'number.+?'}), client.parseDOM(i, 'span', ret='meta-embed'), re.findall('\"(http.+?)\"', i)) for i in r]
+        r = [(i[0], i[1], [x for x in i[2] if '.jpg' in x]) for i in r]
+        r = [(i[0][0].strip(), i[1][0], i[2][0]) for i in r if i[0] and i[1] and i[2]]
+        r = [(client.replaceHTMLCodes(i[0]), client.replaceHTMLCodes(i[1]), client.replaceHTMLCodes(i[2])) for i in r]
+        r = [(i[0].encode('utf-8'), i[1].encode('utf-8'), i[2].encode('utf-8')) for i in r]
+        r = [(i[0] if not i[0].isdigit() else 'The %s' % i[0], i[1], i[2]) for i in r]
+        c = [i[1] for i in r] ; c = [x for y,x in enumerate(c) if x not in c[:y]]
+        r = [[x for x in r if i == x[1]][0] for i in c]
+        r = sorted(r, key=lambda x: x[0].lower())
+        return r
+    from resources.lib.modules import cache
+    r = cache.get(guardaserie_episodes, 1, url)
+    return r
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>geturl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist3.param2]'):
+    return url
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+<item>
+<title>ULTIMI FILM</title>
+<link>$doregex[makelist]</link>
+<thumbnail>http://s29.postimg.org/80trdbt9j/Cinema_Italiano.jpg</thumbnail>
+<fanart>http://www.panoramaaudiovisual.com/wp-content/uploads/2012/09/Imperium-Rodaje-4-.jpg</fanart>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param1]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>http://s29.postimg.org/80trdbt9j/Cinema_Italiano.jpg</thumbnail>
+<fanart>http://www.panoramaaudiovisual.com/wp-content/uploads/2012/09/Imperium-Rodaje-4-.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    r = [('[B]CERCA[/B]', 'http://www.casacinema.click/page/1?s=%s')]
+    r += [('[B]ULTIMI FILM[/B]', 'http://www.casacinema.click/genere/film/page/1')]
+    r += [('[B]PRIME VISIONI[/B]', 'http://www.casacinema.click/prime-visioni/')]
+    r += [('Animazione', 'http://www.casacinema.click/genere/film/animazione/page/1')]
+    r += [('Anime', 'http://www.casacinema.click/genere/film/anime/page/1')]
+    r += [('Avventura', 'http://www.casacinema.click/genere/film/avventura/page/1')]
+    r += [('Azione', 'http://www.casacinema.click/genere/film/azione/page/1')]
+    r += [('Biografico', 'http://www.casacinema.click/genere/film/biografico/page/1')]
+    r += [('Erotico', 'http://www.casacinema.click/genere/film/erotico/page/1')]
+    r += [('Comico', 'http://www.casacinema.click/genere/film/comico/page/1')]
+    r += [('Commedia', 'http://www.casacinema.click/genere/film/commedia/page/1')]
+    r += [('Documentario', 'http://www.casacinema.click/genere/film/documentario/page/1')]
+    r += [('Drammatico', 'http://www.casacinema.click/genere/film/drammatico/page/1')]
+    r += [('Fantascienza', 'http://www.casacinema.click/genere/film/fantascienza/page/1')]
+    r += [('Fantasy', 'http://www.casacinema.click/genere/film/fantasy/page/1')]
+    r += [('Giallo', 'http://www.casacinema.click/genere/film/giallo/page/1')]
+    r += [('Guerra', 'http://www.casacinema.click/genere/film/guerra/page/1')]
+    r += [('Horror', 'http://www.casacinema.click/genere/film/horror/page/1')]
+    r += [('Musical', 'http://www.casacinema.click/genere/film/musical/page/1')]
+    r += [('Poliziesco', 'http://www.casacinema.click/genere/film/poliziesco/page/1')]
+    r += [('Romantico', 'http://www.casacinema.click/genere/film/romantico/page/1')]
+    r += [('Storico', 'http://www.casacinema.click/genere/film/storico/page/1')]
+    r += [('Thriller', 'http://www.casacinema.click/genere/film/thriller/page/1')]
+    r += [('Western', 'http://www.casacinema.click/genere/film/western/page/1')]
+    return r
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[makelist2.param1]</title>
+<link>$doregex[geturl]</link>
+<thumbnail>[makelist2.param3]</thumbnail>
+<fanart>http://www.panoramaaudiovisual.com/wp-content/uploads/2012/09/Imperium-Rodaje-4-.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist.param2]'):
+    from resources.lib.modules import cache,client,workers
+    import re,urllib,xbmc,xbmcgui
+
+    class page:
+        def run(self, r):
+            threads = [] ; self.r = [] ; r = [(r.index(i)+1, i) for i in r]
+            for i in r: threads.append(workers.Thread(self.request, i))
+            [i.start() for i in threads] ; [i.join() for i in threads]
+            return ''.join([str(i[1]) for i in sorted(self.r, key=lambda x: x[0])])
+        def request(self, i):
+            self.r += [(i[0], client.request(i[1]))]
+
+    def kboard():
+        w = xbmcgui.Window(10000) ; p = 'plugin.video.phstreams.regex.search'
+        t = xbmc.getInfoLabel('listitem.label')
+        if t == '': return w.getProperty(p)
+        k = xbmc.Keyboard('', t) ; k.doModal()
+        q = k.getText() if k.isConfirmed() else None
+        if (q == None or q == ''): return
+        w.setProperty(p, q) ; return q
+
+    if '?s=%s' in url:
+        u = [] ; q = kboard()
+        if q == None: return
+        url = url % urllib.quote_plus(q)
+        r = url.replace('/page/1', '/page/%s')
+        for i in range(1, 3): u += [r % str(i)]
+    elif '/page/' in url:
+        u = []
+        r = url.replace('/page/1', '/page/%s')
+        for i in range(1, 11): u += [r % str(i)]
+    else:
+        u = [url]
+    if url == '': return
+    r = cache.get(page().run, 24, u)
+    r = re.sub(r'[^\x00-\x7F]+', ' ', r)
+    r = client.parseDOM(r, 'ul', attrs = {'class': 'posts'})
+    r = client.parseDOM(r, 'li')
+    r = [(client.parseDOM(i, 'div', attrs = {'class': 'title'}), client.parseDOM(i, 'a', ret='href'), client.parseDOM(i, 'a', ret='data-thumbnail')) for i in r]
+    r = [(i[0][0], i[1][0], i[2][0]) for i in r if i[0] and i[1] and i[2]]
+    r = [(client.replaceHTMLCodes(i[0]), client.replaceHTMLCodes(i[1]), client.replaceHTMLCodes(i[2])) for i in r]
+    r = [(i[0].encode('utf-8'), i[1].encode('utf-8'), i[2].encode('utf-8')) for i in r]
+    return r
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>geturl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist2.param2]'):
+    from resources.lib.modules import client,control
+    import re,urlresolver
+
+    h = ['speedvideo', 'flashx', 'nowvideo']
+    r = client.request(url)
+    r = re.sub(r'[^\x00-\x7F]+', ' ', r)
+    r = r.replace('flashx.ccc/offlinec/offline', 'flashx.tv')
+    s = client.parseDOM(r, 'iframe', ret='SRC', attrs = {'class': 'embed-responsive-item'})
+    s += client.parseDOM(r, 'iframe', ret='src', attrs = {'class': 'embed-responsive-item'})
+    r = client.parseDOM(r, 'div', attrs = {'id': 'links'})[0]
+    r = r.split('><h2>Download</h2>')[0]
+    s += client.parseDOM(r, 'a', ret='href')
+    r = [x for y,x in enumerate(s) if x not in s[:y]]
+    r = [i for i in r if any(x in i for x in h)]
+
+    u = False
+    r = [('Link %s' % str(r.index(i)+1), i) for i in r]
+    r0 = [i[0] for i in r] ; r1 = [i[1] for i in r]
+    if len(r1) == 0: 
+        control.infoDialog('No link available', 'Phoenix')
+        return
+    elif len(r1) > 1:
+        label = control.infoLabel('listitem.label')
+        select = control.dialog.select(label.upper(), r0)
+        if select == -1: return
+        refs = r1[select:]
+    else:
+        refs = r1
+    for ref in refs:
+        try: u = urlresolver.HostedMediaFile(url=ref).resolve()
+        except: u = False
+        if not u == False: break
+    return u
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<plugin>
+<name>30701</name>
+<link>plugin://plugin.video.Karnage/?action=openSettings</link>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/Settings%201.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>30702</name>
+<link>plugin://plugin.video.Karnage/?action=search</link>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/Search%201.png</thumbnail>
+</plugin>

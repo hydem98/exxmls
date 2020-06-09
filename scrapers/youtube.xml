@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>fuckOFF</layoutype>
+<fanart>https://s20.postimg.org/okhkwim25/fanalb.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+<items>
+   <item>
+      <title>[COLOR white]===================[COLOR red][B]ALBANIA[/B][/COLOR]===================[/COLOR]</title>
+      <thumbnail>https://s20.postimg.org/5gwzoa71p/alb.png</thumbnail>
+      <fanart>https://s20.postimg.org/okhkwim25/fanalb.jpg</fanart>
+      <link>#</link>
+      <externallink>#</externallink>
+   </item>
+   <item>
+      <title>[COLOR white]===============[COLOR springred][B]LAND OF EAGLES[/B][/COLOR]================[/COLOR]</title>
+      <thumbnail>https://s20.postimg.org/5gwzoa71p/alb.png</thumbnail>
+      <fanart>https://s20.postimg.org/okhkwim25/fanalb.jpg</fanart>
+      <link>#</link>
+      <externallink>#</externallink>
+   </item>
+
+      <item>
+         <title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]...M’Fal Për Shprehjen![/B][/COLOR]</title>
+         <link>$doregex[makelist]</link>
+		 <regex>
+            <name>makelist</name>
+            <listrepeat><![CDATA[
+                        <title>[COLOR lime][makelist.param1][/COLOR]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist.param2]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist.param2]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>data-video-title="(.*?)".*?\n.*?\n.*?\n.*?\n.*?&lt;a href="\/watch\?v=(.*?)&amp;</expres>
+            <page>https://www.youtube.com/watch?v=QZLw50l3u40&amp;list=PL5ohhePxgDryP-_FNIowUzB12flzvP48r</page>
+            <cookieJar></cookieJar>
+		</regex>
+        <thumbnail>https://i1.wp.com/www.imalbania.com/wp-content/uploads/2016/10/14606257_1243695338984824_4461516517549047541_n.jpg</thumbnail>
+		<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+      </item>
+      <item>
+         <title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]Apartamenti 2XL[/B][/COLOR]</title>
+         <link>$doregex[makelist]</link>
+		 <regex>
+            <name>makelist</name>
+            <listrepeat><![CDATA[
+                        <title>[COLOR lime][makelist.param1][/COLOR]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist.param2]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist.param2]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>data-video-title="(.*?)".*?\n.*?\n.*?\n.*?\n.*?&lt;a href="\/watch\?v=(.*?)&amp;</expres>
+            <page>https://www.youtube.com/watch?v=SExfh-aJiB8&amp;list=PL0CsRbDAwvp-lcrcma3K4qIrz1C3POHuG</page>
+            <cookieJar></cookieJar>
+		</regex>
+        <thumbnail>https://i2.wp.com/www.imalbania.com/wp-content/uploads/2016/02/Apartamenti-2XL-e1455871578136.png</thumbnail>
+		<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+      </item>
+      <item>
+         <title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]Ne te 3 dhe xhaxha Beni - Sezoni 1[/B][/COLOR]</title>
+         <link>$doregex[makelist]</link>
+		 <regex>
+            <name>makelist</name>
+            <listrepeat><![CDATA[
+                        <title>[COLOR lime][makelist.param1][/COLOR]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist.param2]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist.param2]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>data-video-title="(.*?)".*?\n.*?\n.*?\n.*?\n.*?&lt;a href="\/watch\?v=(.*?)&amp;</expres>
+            <page>https://www.youtube.com/watch?v=y4pUPx-wxsI&amp;list=PL5ohhePxgDrwbQ6u4N--9ORA3fKaUbKQw</page>
+            <cookieJar></cookieJar>
+		</regex>
+        <thumbnail>https://i.ytimg.com/vi/zWdVC9ypTic/maxresdefault.jpg</thumbnail>
+		<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+      </item>
+      <item>
+         <title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]Ne te 3 dhe xhaxha Beni - Sezoni 2[/B][/COLOR]</title>
+         <link>$doregex[makelist]</link>
+		 <regex>
+            <name>makelist</name>
+            <listrepeat><![CDATA[
+                        <title>[COLOR lime][makelist.param1][/COLOR]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist.param2]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist.param2]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>data-video-title="(.*?)".*?\n.*?\n.*?\n.*?\n.*?&lt;a href="\/watch\?v=(.*?)&amp;</expres>
+            <page>https://www.youtube.com/watch?v=BbY8wwCR7Zo&amp;list=PL5ohhePxgDrwnVjH5hS-SFyXIVvnM9Kxy</page>
+            <cookieJar></cookieJar>
+		</regex>
+        <thumbnail>https://i.ytimg.com/vi/zWdVC9ypTic/maxresdefault.jpg</thumbnail>
+		<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+      </item>
+      <item>
+         <title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]Ne te 3 dhe xhaxha Beni - Sezoni 3[/B][/COLOR]</title>
+         <link>$doregex[makelist]</link>
+		 <regex>
+            <name>makelist</name>
+            <listrepeat><![CDATA[
+                        <title>[COLOR lime][makelist.param1][/COLOR]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist.param2]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist.param2]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>data-video-title="(.*?)".*?\n.*?\n.*?\n.*?\n.*?&lt;a href="\/watch\?v=(.*?)&amp;</expres>
+            <page>https://www.youtube.com/watch?v=U-OLDAWGp00&amp;list=PL5ohhePxgDrwJqOqG__oKQcK2DkTvksvy</page>
+            <cookieJar></cookieJar>
+		</regex>
+        <thumbnail>https://i.ytimg.com/vi/zWdVC9ypTic/maxresdefault.jpg</thumbnail>
+		<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+      </item>
+      <item>
+         <title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]Taksisti[/B][/COLOR]</title>
+         <link>$doregex[makelist]</link>
+		 <regex>
+            <name>makelist</name>
+            <listrepeat><![CDATA[
+                        <title>[COLOR lime][makelist.param1][/COLOR]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist.param2]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist.param2]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>data-video-title="(.*?)".*?\n.*?\n.*?\n.*?\n.*?&lt;a href="\/watch\?v=(.*?)&amp;</expres>
+            <page>https://www.youtube.com/watch?v=y70tJVYcRns&amp;list=PL5ohhePxgDryxgb_0LAAJT0545eThTJ7e</page>
+            <cookieJar></cookieJar>
+		</regex>
+        <thumbnail>https://i.ytimg.com/vi/rfogFk4HphY/maxresdefault.jpg</thumbnail>
+		<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+      </item>
+      <item>
+         <title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]Trafik 2017[/B][/COLOR]</title>
+         <link>$doregex[makelist]</link>
+		 <regex>
+            <name>makelist</name>
+            <listrepeat><![CDATA[
+                        <title>[COLOR lime][makelist.param1][/COLOR]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist.param2]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist.param2]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>data-video-title="(.*?)".*?\n.*?\n.*?\n.*?\n.*?&lt;a href="\/watch\?v=(.*?)&amp;</expres>
+            <page>https://www.youtube.com/watch?v=5KPHVrM-gpM&amp;list=PLM8BAxfZddjwNcDgrQjE7UiGozx9Cn8QT</page>
+            <cookieJar></cookieJar>
+		</regex>
+        <thumbnail>http://top-channel.tv/new/tv/images/logoprograme/137684827_portokalli.png</thumbnail>
+		<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+      </item>
+      <item>
+         <title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]STOP[/B][/COLOR]</title>
+         <link>$doregex[makelist]</link>
+		 <regex>
+            <name>makelist</name>
+            <listrepeat><![CDATA[
+                        <title>[COLOR lime][makelist.param1][/COLOR]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist.param2]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist.param2]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>data-video-title="(.*?)".*?\n.*?\n.*?\n.*?\n.*?&lt;a href="\/watch\?v=(.*?)&amp;</expres>
+            <page>https://www.youtube.com/watch?v=wNHFNLemsG4&amp;list=PLoGBYFjcuU_uv7sdFxszvhdR2Hn8zMg1x</page>
+            <cookieJar></cookieJar>
+		</regex>
+        <thumbnail>http://www.droni.al/web/stop_tv_klan_16424.jpg</thumbnail>
+		<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+      </item>
+<item>
+<title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]Filma Shqiptare[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+		 <regex>
+            <name>makelist</name>
+            <listrepeat><![CDATA[
+                        <title>[COLOR lime][makelist.param1][/COLOR]</title>
+                        <link>plugin://plugin.video.youtube/play/?video_id=[makelist.param2]</link>
+                        <thumbnail>https://i.ytimg.com/vi/[makelist.param2]/hqdefault.jpg</thumbnail>
+            ]]></listrepeat>
+            <expres>data-video-title="(.*?)".*?\n.*?\n.*?\n.*?\n.*?&lt;a href="\/watch\?v=(.*?)&amp;</expres>
+            <page>https://www.youtube.com/watch?v=daBLIXgz0CY&amp;list=PL2cFXm7-Sb98dREUN0pi_wj5rpkimzP-c</page>
+            <cookieJar></cookieJar>
+		</regex>
+<thumbnail>http://www.sot.com.al/sites/default/files/styles/slide/public/main/articles/filmi-xhirim.jpg</thumbnail>
+<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+</item>
+<item>
+<title>[COLOR lime][B]  •  [/B][/COLOR][COLOR palered][B]ERMAL MAMAQI CHANNEL[/B][/COLOR]</title>
+<utube>ErmalMamaqiOfficial</utube>
+<thumbnail>https://upload.wikimedia.org/wikipedia/sq/4/42/Ermal_Mamaqi.jpg</thumbnail>
+<fanart>https://s20.postimg.org/a9iz36oj1/fanart.jpg</fanart>
+</item>
+   <item>
+      <title>[COLOR white]===================[COLOR red][B]COLD[/B][/COLOR][COLOR turquoise][B]FIRE[/B][/COLOR]===================[/COLOR]</title>
+      <thumbnail>https://s20.postimg.org/5gwzoa71p/alb.png</thumbnail>
+      <fanart>https://s20.postimg.org/okhkwim25/fanalb.jpg</fanart>
+      <link>#</link>
+      <externallink>#</externallink>
+   </item>
+</items>

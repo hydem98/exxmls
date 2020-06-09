@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>Karnage</layoutype>
+<fanart>http://karnage.dark-avengers.com/images/fanarts/karfan.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+
+<items>
+
+<dir>
+    <name>[COLOR white]LEGAL DISCLAIMER:[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<dir>
+    <name>[COLOR red]karnage[/COLOR] [COLOR white]third party addon does not host, provide, archive, store, or distribute media of any kind. karnage acts merely as an index (or directory) of media posted by other enthusiasts on the internet, which is completely out of the control of karnage.
+
+karnage RESPECTS THE RIGHTS OF OTHERS, AND PROHIBITS THE USE OF REFERENCED MATERIAL FOR ANY PURPOSE OTHER THAN THAT FOR WHICH IT IS INTENDED (WHERE SUCH USE IS LAWFUL AND FREE OF CIVIL LIABILITY OR OTHER CONSTRAINT) AND IN SUCH CIRCUMSTANCES WHERE POSSESSION OF SUCH MATERIAL MAY HAVE ANY ADVERSE FINANCIAL, PREJUDICIAL OR ANY OTHER EFFECT ON ANY OTHER THIRD PARTY.[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<item>
+  <title>horror</title>
+  <link>$doregex[sxlink]</link>
+  <regex>
+    <name>sxlink</name>
+    <expres><![CDATA[high.stream.*?(http.*?)[",']\W]]></expres>
+    <page>http://www.filmon.com/api-v2/channel/$doregex[ch_id]</page>
+    <referer>http://www.filmon.tv/tv/fotv-usa?affid=152022Ua$doregex[ch_id]</referer>
+    <agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36</agent>
+    <accept>*/*; q=0.01</accept>
+    <cookieJar></cookieJar>
+    </includeheaders>
+  </regex>
+  <regex>
+    <name>ch_id</name>
+    <expres><![CDATA[clicked_channel_id.*?[",'](.*?)[",']\W]]></expres>
+    <page></page>
+    <agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36</agent>
+    <accept>*/*; q=0.01</accept>
+    <cookieJar></cookieJar>
+    </includeheaders>
+  </regex>
+</item>
+
+<plugin>
+<name>[COLOR red]action[/COLOR]</name>
+<link>http://fs.evonetbd.com/Media/Movies/Action%20Movie/</link>
+<thumbnail>https://pbs.twimg.com/profile_images/632550903829143553/l1mcM8bL.png</thumbnail>
+</plugin>
+
+<plugin>
+    <name>[COLOR white]x265 Movies[/COLOR]</name>
+    <link>http://avadl.uploadet.ir/DL7/Film/X265/</link>
+    <thumbnail>https://s14.postimg.org/fb7txofzl/warner_bros_logo2.png</thumbnail>
+</plugin>
+
+<plugin>
+    <name>[COLOR white]New Collection[/COLOR]</name>
+    <link>http://dl.tehmovies.org/94/95/9/</link>
+    <thumbnail>http://www.mymovies.dk/media/33271/mymoviesicon.png</thumbnail>
+</plugin>

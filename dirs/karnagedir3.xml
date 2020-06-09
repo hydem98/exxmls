@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>Karnage</layoutype>
+<fanart>http://karnage.dark-avengers.com/images/fanarts/karfan.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+
+
+<item>
+<title>Ustreamix Beta</title>
+<link>$doregex[makelist]</link>
+<thumbnail>https://www.tvaddons.ag/forums/images/tvaddons/misc/tvaddons-retinafooter.png</thumbnail>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR red][makelist.param2][/COLOR][COLOR white][makelist.param3][/COLOR]</title>
+<link>$doregex[get-url]|User-Agent=iPad</link>
+<info>[makelist.param3]</info>
+<thumbnail>https://www.tvaddons.ag/forums/images/tvaddons/misc/tvaddons-retinafooter.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+  import re
+  channels = re.findall('<a href="(.*?)".*?>(.*?)<.*?live">(.*?)<',page_data)
+  return sorted(channels)
+]]></expres>
+<page>https://beta.ustreamix.com/</page>
+</regex>
+<regex>
+<name>get-url</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url='https://beta.ustreamix.com/[makelist.param1]'):
+  import re, requests
+  hdr = {'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X)'}
+  html = requests.get(url,headers=hdr).text
+  uip = re.findall("x_first_ip = '(.*?)'",html,re.DOTALL)[0]
+  ohtm = eval(re.findall('Obfuscator.*?var.*?(\[.*?\])',html,re.DOTALL)[0])
+  oval = int(re.findall('replace.*?- (\d*)',html)[0])
+  phtml = ''
+  for oht in ohtm:
+    phtml += chr(int(re.findall('\D*(\d*)',oht.decode('base64'))[0]) - oval)
+  strurl = re.findall("var stream = '(.*?)'",phtml)[0]
+  hdr['Referer'] = url
+  tokpg = requests.get('https://mir.hulkfiles.com/stats.php?p=%s'%uip,headers=hdr).text
+  token = re.findall('jdtk="(.*?)"',tokpg)[0]
+  return strurl+token
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+<item>
+<title>[COLOR lime][B]  •   [/B][/COLOR][COLOR royalred]Daily Iptv m3u playlists[/COLOR] - [COLOR red](30.01.2017)[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR cyan]Server: [makelist.param2][/COLOR] </title>
+<link>$doregex[makelist2]</link>
+]]></listrepeat>
+<expres>(http://(.*)/.*)</expres>
+<page>http://pastebin.com/raw/5tBNEXZ1</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+ 
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+    <title>[COLOR springred]Karnage[/COLOR] : [COLOR royalred][makelist2.param1][/COLOR]</title>
+    <link>plugin://plugin.video.f4mTester/?url=[makelist2.param2]&amp;streamtype=TSDOWNLOADER&amp;maxbitrate=0&amp;proxy=None&amp;name=[COLOR royalred][makelist2.param1][/COLOR]</title></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+        <fanart></fanart>
+]]></listrepeat>
+<expres>#EXTINF:-1,(.*?)\n(.*)</expres>
+<page>[makelist.param1]</page>
+<agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
+</regex>
+<thumbnail>https://superrepo.org/static/images/icons/original/xplugin.video.xtream-codes.png.pagespeed.ic.7uLaZTpLY3.png</thumbnail>
+</item>
+
+<item>
+<title>http://www.tikilive.com/channel/nbc</title>
+<link>$doregex[source]</link>
+<regex>
+<name>source</name>
+<listrepeat><![CDATA[
+<title>play</title>
+<link>http://tv-tikilive-live.hls.adaptive.level3.net/show_demotiki/64/amlst:mainstream/playlist.m3u8?op_id=19&amp;userId=0&amp;channelId=40674&amp;stime=[source.param1]&amp;etime=[source.param2]&amp;token=[source.param3]|User-Agent=Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[hlsCdnMoStime: '(.*?)'.*?\n.*?hlsCdnMoEtime: '(.*?)'.*?\n.*?hlsCdnMoToken: '(.*?)']]></expres>
+<page>http://www.tikilive.com/embed?scheme=embedChannel&amp;channelId=40674&autoplay=no&amp;showChat=no|User-Agent=Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</page>
+</regex>
+<cookieJar></cookieJar>
+</item>
+
+<item>
+<title>http://www.tikilive.com/channel/wwe1</title>
+<link>$doregex[source]</link>
+<regex>
+<name>source</name>
+<listrepeat><![CDATA[
+<title>play</title>
+<link>http://tv-tikilive-live.hls.adaptive.level3.net/show_demotiki/138/amlst:mainstream/demotiki138.m3u8?op_id=19&amp;userId=0&amp;channelId=40646&amp;stime=[source.param1]&amp;etime=[source.param2]&amp;token=[source.param3]|User-Agent=Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[hlsCdnMoStime: '(.*?)'.*?\n.*?hlsCdnMoEtime: '(.*?)'.*?\n.*?hlsCdnMoToken: '(.*?)']]></expres>
+<page>http://www.tikilive.com/embed?scheme=embedChannel&amp;channelId=40646&autoplay=no&amp;showChat=no|User-Agent=Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</page>
+</regex>
+<cookieJar></cookieJar>
+</item>
+
+<item>
+<title>Sexy Sisters (1977)</title>
+<meta>
+<content>movie</content>
+<imdb>tt0075322</imdb>
+<title>Sexy Sisters</title>
+<year>1977</year>
+</meta>
+<link>
+<sublink>http://vidzi.tv/ds7yn6ppppqh.html</sublink>
+<sublink>http://vidto.me/vwfw18vqsh04.html</sublink>
+<sublink>http://watchers.to/32v81cijxqmv.html</sublink>
+<sublink>https://openload.co/f/HgPlhFDE0wc/</sublink>
+</link>
+<thumbnail>https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2OTE4NzAyMF5BMl5BanBnXkFtZTgwNzc2MDgzOTE@._V1_.jpg</thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<name>[COLOR white][B]Testings[/B][/COLOR]</name>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'https://pastebin.com/raw/sMMuhUG6'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<name>[COLOR white][B]Movies[/B][/COLOR]</name>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://ak-premium.cf/adds/nn/m/hm.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<name>[COLOR purple][B]3D Movies[/B][/COLOR]</name>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://ak-premium.cf/adds/nn/m/3d.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<name>[COLOR red][B]TV Shows[/B][/COLOR]</name>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://ak-premium.cf/adds/nn/t/tsh.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<name>[COLOR lime][B]Kids[/B][/COLOR]</name>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://ak-premium.cf/adds/nn/m/Disney.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<name>[COLOR teal][B]Live TV[/B][/COLOR]</name>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://ak-premium.cf/adds/nn/l/livtv.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<name>[COLOR springred][B]Sports[/B][/COLOR]</name>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://ak-premium.cf/adds/nn/l/sprt.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<name>[COLOR white]TEST[/COLOR]</name>
+<thumbnail>https://s18.postimg.org/6nd04rp89/infitiny_circle_v1.png</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<plugin>
+<name>30702</name>
+<link>plugin://plugin.video.Karnage/?action=search</link>
+<thumbnail>https://s22.postimg.org/6o7r6os9t/Search_Icon.png</thumbnail>
+</plugin>
+
+<item>
+<title> Movies Collection 4.1 (2160p|1080p)</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://dl.my-film.org/reza/film/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:2160p|1080p)]]></expres>
+<page>http://dl.my-film.org/reza/film/</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<item>
+<title> Movies Collection 3 (720p|1080p)</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://dl2.downloado.site/dl2/Movie/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://dl2.downloado.site/dl2/Movie/</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<item>
+<title> Movies Collection 2 (720p|1080p)</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://dl.tehmovies.org/94/95/9/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://dl.tehmovies.org/94/95/9/</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<item>
+<title> Movies Collection (720p|1080p)</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://dl.my-film.org/reza/film/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://dl.my-film.org/reza/film/</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+<name>[COLOR red]Zen Channels[/COLOR]</name>
+<link>plugin://plugin.video.zen/?action=channels</link>
+<thumbnail>https://s20.postimg.org/kcya44c31/channels.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>[COLOR red]specto channels[/COLOR]</name>
+<link>plugin://plugin.video.specto/?action=channels</link>
+<thumbnail>https://s20.postimg.org/xv56geo8d/disney.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>[COLOR red]Movies page bia2sv[/COLOR]</name>
+<link>http://s1.bia2sv.in/Movies/Archive/2016/</link>
+<thumbnail>https://pbs.twimg.com/profile_images/632550903829143553/l1mcM8bL.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>30701</name>
+<link>plugin://plugin.video.Karnage/?action=openSettings</link>
+<thumbnail>https://s20.postimg.org/wr7ervovh/Setting.png</thumbnail>
+</plugin>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>Karnage</layoutype>
+<fanart>http://karnage.dark-avengers.com/images/fanarts/karfan.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+
+<items>
+
+<dir>
+    <name>LEGAL DISCLAIMER:</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<dir>
+    <name>karnage third party addon does not host, provide, archive, store, or distribute media of any kind. karnage acts merely as an index (or directory) of media posted by other enthusiasts on the internet, which is completely out of the control of karnage.
+
+karnage RESPECTS THE RIGHTS OF OTHERS, AND PROHIBITS THE USE OF REFERENCED MATERIAL FOR ANY PURPOSE OTHER THAN THAT FOR WHICH IT IS INTENDED (WHERE SUCH USE IS LAWFUL AND FREE OF CIVIL LIABILITY OR OTHER CONSTRAINT) AND IN SUCH CIRCUMSTANCES WHERE POSSESSION OF SUCH MATERIAL MAY HAVE ANY ADVERSE FINANCIAL, PREJUDICIAL OR ANY OTHER EFFECT ON ANY OTHER THIRD PARTY.</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<item>
+<title>we do not host these movies they are hosted elsewhere </title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[hd.param3] [COLOR redred]([hd.param1])</title>
+   <link>[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|avi|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page></page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+<name></name>
+<link></link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<dir>
+    <name></name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<plugin>
+    <name></name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<plugin>
+    <name></name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>

@@ -1,0 +1,250 @@
+#######################################################################################################################################
+<poster>Phoenix</poster>
+#######################################################################################################################################
+
+<item>
+<name>Toon Town</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/Phoenix%20TV.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://pastebin.com/raw/smam7ZkV'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>Phoenix Sports</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/Phoenix%20Sports.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://phoenixtv.offshorepastebin.com/tv/events.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>Phoenix New Releases</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/Phoenix%20New%20Releases.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://phoenixtv.offshorepastebin.com/releases/main.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>Incredible TV</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/INCREDIBLETV22.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://phoenixtv.offshorepastebin.com/incredible-tv/main.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>Cosmix</name>
+<thumbnail>http://cosmix.offshorepastebin.com/Weblinks/icons/cosmixlogo.png</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://cosmix.offshorepastebin.com/Weblinks/cosmixphlink.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>Crusader88</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/crusadericon.png</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://crusader88.offshorepastebin.com/main.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>Diva's Den</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/DivaLogo.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://one242415.offshorepastebin.com/Diva/Diva_Directory.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>MorePower</name>
+<thumbnail>https://pbs.twimg.com/profile_images/378800000267941465/73efacc8d0db05ff9937dee1a90d7f8a.png</thumbnail> 
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://morepower.offshorepastebin.com/MorePower_Directory.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>One242415</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/BCADONE242415PNG.png</thumbnail> 
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://one242415.offshorepastebin.com/maindir/main.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>The Alpha Reborn</name>
+<thumbnail>http://alphareborn.offshorepastebin.com/arb/images/alphareborn.png</thumbnail> 
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://alphareborn.offshorepastebin.com/arb/home.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>Collections</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/collections.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://phoenixtv.offshorepastebin.com/collections/main.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>Filmography</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/filmography.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://phoenixtv.offshorepastebin.com/actors/main.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<item>
+<name>Documentary</name>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/DocumentaryPHX2.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://one242415.offshorepastebin.com/Misc/docs.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import noname
+    noname.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+<plugin>
+<name>Cartoon Crazy</name>
+<link>plugin://plugin.video.Karnage/?action=cartoon</link>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/CARTOONCRAZE.jpg</thumbnail>
+</plugin>
+<plugin>
+<name>30701</name>
+<link>plugin://plugin.video.Karnage/?action=openSettings</link>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/Settings%201.png</thumbnail>
+</plugin>
+<plugin>
+<name>30721</name>
+<link>plugin://plugin.video.Karnage/?action=downloader</link>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/Downloads.png</thumbnail>
+</plugin>
+<plugin>
+<name>30702</name>
+<link>plugin://plugin.video.Karnage/?action=search</link>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/Search%201.png</thumbnail>
+</plugin>
+<plugin>
+<name>Testings</name>
+<link>plugin://plugin.video.Karnage/?action=developer</link>
+<thumbnail>http://phoenixtv.offshorepastebin.com/art/main/Testings.png</thumbnail>
+</plugin>

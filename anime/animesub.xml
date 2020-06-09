@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>Karnage</layoutype>
+<fanart>http://karnage.dark-avengers.com/images/fanarts/karfan.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+
+<items>
+
+<dir>
+    <name>[COLOR white]LEGAL DISCLAIMER:[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<dir>
+    <name>[COLOR red]karnage[/COLOR] [COLOR white]third party addon does not host, provide, archive, store, or distribute media of any kind. karnage acts merely as an index (or directory) of media posted by other enthusiasts on the internet, which is completely out of the control of karnage.
+
+karnage RESPECTS THE RIGHTS OF OTHERS, AND PROHIBITS THE USE OF REFERENCED MATERIAL FOR ANY PURPOSE OTHER THAN THAT FOR WHICH IT IS INTENDED (WHERE SUCH USE IS LAWFUL AND FREE OF CIVIL LIABILITY OR OTHER CONSTRAINT) AND IN SUCH CIRCUMSTANCES WHERE POSSESSION OF SUCH MATERIAL MAY HAVE ANY ADVERSE FINANCIAL, PREJUDICIAL OR ANY OTHER EFFECT ON ANY OTHER THIRD PARTY.[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<item>
+<title>we do not host these movies they are hosted elsewhere </title>
+<link>$doregex[hd]</link>
+<regex>
+<name>[COLOR red]hd[/COLOR]</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://www.3xclip.com/cdn/Anime/English_Dubbed/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|avi|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://www.3xclip.com/cdn/Anime/English_Dubbed/</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+<name>mixed series non dubbed</name>
+<link>http://www.3xclip.com/cdn/Anime/English_Dubbed/</link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<item>
+<title>thank you for the support</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>[COLOR red]hd[/COLOR]</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://bookdl.online/s1/Anime/Ended/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|avi|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://bookdl.online/s1/Anime/Ended</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+    <name>ended anime non subbed </name>
+    <link>http://bookdl.online/s1/Anime/Ended/</link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+

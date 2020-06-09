@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>thumbnail</layoutype>
+<fanart></fanart>
+<SetViewMode>1</SetViewMode>
+
+<dir>
+    <name>[COLOR red]welcome To[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<dir>
+    <name>[COLOR red]brought to you by Karnage of dark avengers[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<item>
+<name>Tv Shows 1</name>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://ktxts.dark-avengers.com/tv%20shows/tvsho1.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import Karnage
+    Karnage.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>

@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>Karnage</layoutype>
+<fanart>http://karnage.dark-avengers.com/images/fanarts/karfan.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+
+<items>
+
+<dir>
+    <name>LEGAL DISCLAIMER:</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<dir>
+    <name>karnage third party addon does not host, provide, archive, store, or distribute media of any kind. karnage acts merely as an index (or directory) of media posted by other enthusiasts on the internet, which is completely out of the control of karnage.
+
+karnage RESPECTS THE RIGHTS OF OTHERS, AND PROHIBITS THE USE OF REFERENCED MATERIAL FOR ANY PURPOSE OTHER THAN THAT FOR WHICH IT IS INTENDED (WHERE SUCH USE IS LAWFUL AND FREE OF CIVIL LIABILITY OR OTHER CONSTRAINT) AND IN SUCH CIRCUMSTANCES WHERE POSSESSION OF SUCH MATERIAL MAY HAVE ANY ADVERSE FINANCIAL, PREJUDICIAL OR ANY OTHER EFFECT ON ANY OTHER THIRD PARTY.</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<item>
+<title>we do not host these movies they are hosted elsewhere </title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[hd.param3] [COLOR redred]([hd.param1])</title>
+   <link>http://dl.dlfile.pro/2/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mp3|wav|wma])">(.*?)\.(?:mp3|wma)]]></expres>
+<page>http://dl.dlfile.pro/2/</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+<name>tv and movies mixed</name>
+<link>http://dl.dlfile.pro/2/</link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<dir>
+    <name></name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<item>
+<title>we do not host these movies they are hosted elsewhere </title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[hd.param3] [COLOR redred]([hd.param1])</title>
+   <link>http://watchtheshows.com/series/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://watchtheshows.com/series</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+    <name>watch the shows</name>
+    <link>http://watchtheshows.com/series/a/</link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<plugin>
+    <name></name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<item>
+<title>we do not host these movies they are hosted elsewhere </title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[hd.param3] [COLOR redred]([hd.param1])</title>
+   <link>http://fs.evonetbd.com/Media/Movies/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://fs.evonetbd.com/Media/Movies/</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+    <name>horror</name>
+    <link>http://fs.evonetbd.com/Media/Movies/%20Animation/Animated/1900-1999/</link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<plugin>
+    <name></name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<item>
+<title>[COLOR red][B]IGNITE[/B][/COLOR][COLOR orange][B][COLOR white] MY[COLOR orange] OUTDOOR[COLOR white] TV[COLOR orange] VIDEO ON DEMAND[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[B][COLOR white] M[COLOR orange]O[/B][/COLOR][B][COLOR white]TV - [COLOR yellow][makelist.param2][/B][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>http://myoutdoortv.com/img/logo.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[li><a href="\/(.*genre-id=\d{2})">(.*?)<]]></expres>
+<page>http://myoutdoortv.com/pages/showlisting/$doregex[savecookie]</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</agent>
+<cookieJar>$doregex[getLogin]</cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B] [makelist.param2][/COLOR] - [COLOR orange][makelist2.param3][/B][/COLOR]</title>
+  <link>$doregex[makelist3]</link>
+  <thumbnail>http://myoutdoortv.com/[makelist2.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[new-show".*\s.*src="/(.*?)"[\w\W\s]*?play-show.+href="\/(.*?)".*\s.*h3>(.*?)<]]></expres>
+<page>http://myoutdoortv.com/[makelist.param1]</page>
+<referer>http://myoutdoortv.com/pages/showlisting</referer>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</agent>
+<cookieJar>open[myoutdoortv.lwp]</cookieJar>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B] [makelist2.param3][/COLOR] - [COLOR orange][makelist3.param3][/B][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist3.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[data-resume.*\s.*src="(.*?)"[\w\W\s]*?h4.+?href="\/(.*?)".+?>(.*?)<]]></expres>
+<page>http://myoutdoortv.com/[makelist2.param2]</page>
+<referer>http://myoutdoortv.com/[makelist.param1]</referer>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</agent>
+<cookieJar>open[myoutdoortv.lwp]</cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://myoutdoortv.com/[makelist3.param2]'):
+  import requests, re
+  ref = 'http://myoutdoortv.com/[makelist2.param2]'
+  headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36', 'Referer':ref}
+  session = requests.session()
+  session.cookies = Cookie_Jar
+  source = session.get(url, headers = headers).text
+  return re.findall('url".+?"(http.*m3u8.*?)"', source)[0]
+]]></expres>
+<page></page>
+<referer></referer>
+<cookieJar>open[myoutdoortv.lwp]</cookieJar>
+<agent></agent>
+</regex>
+<regex>
+<name>getLogin</name>
+<expres></expres>
+<page>https://myoutdoortv.com/account/sign-in</page>
+<referer>https://myoutdoortv.com/account/sign-in</referer>
+<rawpost>$doregex[getPost]</rawpost>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</agent>
+<noredirect>true</noredirect>
+<cookieJar>$doregex[getcookie]</cookieJar>
+</regex>
+<regex>
+<name>getPost</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'https://myoutdoortv.com/account/sign-in'):
+  import requests, re, urllib
+  headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36', 'Referer':'http://myoutdoortv.com/'}
+  session = requests.session()
+  session.cookies = Cookie_Jar
+  source = session.get(url, headers = headers).text
+  target = re.findall('VIEWSTATE" value="(.*?)"', source)[0]
+  general = re.findall('VIEWSTATEGENERATOR" value="(.*?)"', source)[0]
+  validate = re.findall('EVENTVALIDATION" value="(.*?)"', source)[0]
+  data = '__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=' + urllib.quote(target) + '&__VIEWSTATEGENERATOR=' + urllib.quote(general) + '&__EVENTVALIDATION=' + urllib.quote(validate)
+  return  data + '&ctl00%24ContentPlaceHolder%24EmailTextBox=gqmanvan%40gmail.com&ctl00%24ContentPlaceHolder%24PasswordTextBox=William06%2422&ctl00%24ContentPlaceHolder%24SignInButton=Sign+In'
+]]></expres>
+<page></page>
+<referer></referer>
+<cookieJar></cookieJar>
+<agent></agent>
+</regex>
+<regex>
+<name>getcookie</name>
+<expres></expres>
+<page>https://myoutdoortv.com/account/sign-in</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>savecookie</name>
+<expres></expres>
+<page></page>
+<cookieJar>save[myoutdoortv.lwp]</cookieJar>
+</regex>
+<thumbnail>http://myoutdoortv.com/img/logo.png</thumbnail>
+</item>
+
+
+<i#tem>
+<title>[COLOR orange][B]C[COLOR orange]URIOSITY STREAM[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B][makelist.param2][/B][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):
+  list = re.findall('(.*)', page_data)[0].replace('\\', '')
+  return re.findall('"name":"(.*?)".+?label":"(.*?)","image_url":"(.*?)"', list)
+]]></expres>
+<page>https://api.curiositystream.com/v1/categories</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B][makelist2.param2][/B][/COLOR]</title>
+  <link>$doregex[makelist3]</link>
+  <thumbnail>[makelist2.param4]</thumbnail>
+  <info>[makelist2.param3]</info>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import requests, re
+def GetLSProData(page_data,Cookie_Jar,m):
+  url = 'https://api.curiositystream.com/v1/media?filterBy=category&limit=20&collections=true&term=[makelist.param1]&page=1'
+  source = requests.get(url, headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}).text
+  total_pages = re.findall('"total_pages":(.*?),', source)[0]
+  print total_pages
+  s = '1'
+  s= int(s)
+  while str(s) != total_pages :
+     s = s + 1
+     nurl= 'https://api.curiositystream.com/v1/media?filterBy=category&limit=20&collections=true&term=[makelist.param1]&page=' + str(s)
+     nsource = requests.get(nurl, headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36', 'X-Auth-Token': '$doregex[getAuth]'}).text
+     source = source + nsource
+     print s
+  list = re.findall('(.*)', source)[0].replace('\\', '')
+  return re.findall('(?s)id":(\d+),.*?"title":"(.*?)".*?"description":"(.*?)".*?image_small":"(.*?)"', list)
+]]></expres>
+<page></page>
+<agent></agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getAuth</name>
+<expres>auth_token":"([^"]+)</expres>
+<page>https://api.curiositystream.com/v1/login</page>
+<rawpost>email=gqmanvan%40gmail.com&amp;password=george44</rawpost>
+<referer>https://app.curiositystream.com/login</referer>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+   <title>[COLOR yellow][B][makelist3.param1][/B][/COLOR]</title>
+   <link>[makelist3.param4]</link>
+   <thumbnail>[makelist3.param3]</thumbnail>
+   <info>[makelist3.param2]</info>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import requests, re
+def GetLSProData(page_data,Cookie_Jar,m,url = 'https://api.curiositystream.com/v2/series/[makelist2.param1]'):
+  headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36', 'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'deflate', 'Origin': 'https://app.curiositystream.com', 'Referer': 'https://api.curiositystream.com/v2/series/[makelist2.param1]', 'Content-Type': 'application/json', 'X-Auth-Token': '$doregex[getAuth]'}
+  source = requests.get(url, headers = headers).text
+  list = re.findall('(.*)', source)[0].replace('\\', '')
+  return re.findall('(?s)media_count.*?"title":"(.*?)".*?"description":"(.*?)".*?image_small":"(.*?)".*?master_playlist_url":"(.*?)"', list)
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+
+<i#tem>
+<title>[COLOR orange][B]C[COLOR orange]URIOSITY STREAM[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B][makelist.param2][/B][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA["name":"(.*?)".+?label":"(.*?)","image_url":"(.*?)"]]></expres>
+<page>$doregex[getPage]</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getPage</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import re
+    strurl = re.findall('(.*)', page_data)[0].replace('\/', '/')
+    return strurl
+]]></expres>
+<page>https://api.curiositystream.com/v1/categories</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B][makelist2.param2][/B][/COLOR]</title>
+  <link>$doregex[makelist3]</link>
+  <thumbnail>[makelist2.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[id":(\d+),.+?:"(.*?)".+?.+?image_small":"(.*?)"]]></expres>
+<page>$doregex[getLink]</page>
+<accept>*/*</accept>
+<setcookie>x-auth-token=$doregex[getAuth]</setcookie>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getAuth</name>
+<expres>auth_token":"([^"]+)</expres>
+<page>https://api.curiositystream.com/v1/login</page>
+<rawpost>email=gqmanvan%40gmail.com&amp;password=george44</rawpost>
+<referer>https://app.curiositystream.com/login</referer>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+  <title>[COLOR yellow][B][makelist3.param1][/B][/COLOR]</title>
+  <link>[makelist3.param3]</link>
+  <thumbnail>[makelist3.param2]</thumbnail>
+]]></listrepeat>
+<expres>"title":"(.*?)".+?image_small":"(.*?)".+?master_playlist_url":"(.*?)"</expres>
+<page>$doregex[getSeries]</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<setcookie>x-auth-token=$doregex[getAuth]</setcookie>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getSeries</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'https://api.curiositystream.com/v2/series/[makelist2.param1]'):
+ import requests, re
+ tok = '$doregex[getAuth]'
+ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36', 'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'deflate', 'Origin': 'https://app.curiositystream.com', 'Referer': 'https://api.curiositystream.com/v2/series/[makelist2.param1]', 'Content-Type': 'application/json', 'X-Auth-Token': tok}
+ source = requests.get(url, headers = headers)
+ page = re.findall('(.*)', source.text)[0].replace('\/', '/')
+ return page
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getLink</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import requests, re
+ term = '[makelist.param1]'
+ url = 'https://api.curiositystream.com/v1/media?filterBy=category&limit=20&collections=true&term=' + term + '&page=1'
+ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}
+ source = requests.get(url, headers = headers).text
+ total_pages = re.findall('"total_pages":(.*?),', source)[0]
+ print total_pages
+ s = '1'
+ s= int(s)
+ while str(s) != total_pages :
+    s = s + 1
+    nurl= 'https://api.curiositystream.com/v1/media?filterBy=category&limit=20&collections=true&term=' + term + '&page=' + str(s)
+    nsource = requests.get(nurl, headers=headers).text
+    source = source + nsource
+    print s
+ strUrl = re.findall('(.*)', source)[0].replace('\/', '/')
+ return strUrl
+]]></expres>
+<page></page>
+<agent></agent>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR snow][B]CURIOSIT[COLOR orange]Y[/COLOR] STREAM 1[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B][makelist.param2][/B][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):
+  list = re.findall('(.*)', page_data)[0].replace('\\', '')
+  return re.findall('(?s)"id":(\d{1}),.*?label":"(.*?)"."image_url":"(.*?)".*?subcategories"(?s)(.*?)}\]}', list)
+]]></expres>
+<page>https://api.curiositystream.com/v1/categories</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][B][makelist2.param3][/B][/COLOR]</title>
+  <link>$doregex[makelist3]</link>
+  <thumbnail>[makelist2.param4]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA["id":(\d+)."name":"(.*?)"."label":"(.*?)"."image_url":"(.*?)"]]></expres>
+<page>[makelist.param4]</page>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+  <title>[COLOR snow][B][makelist3.param2][/B][/COLOR]</title>
+  <link>$doregex[makelist4]</link>
+  <thumbnail>[makelist3.param4]</thumbnail>
+  <info>[makelist3.param3]</info>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import requests, re
+def GetLSProData(page_data,Cookie_Jar,m):
+  url = 'https://api.curiositystream.com/v1/media?filterBy=category&limit=20&collections=true&term=[makelist2.param2]&page=1'
+  source = requests.get(url, headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}).text
+  total_pages = re.findall('"total_pages":(.*?),', source)[0]
+  print total_pages
+  s = '1'
+  s= int(s)
+  while str(s) != total_pages :
+     s = s + 1
+     nurl= 'https://api.curiositystream.com/v1/media?filterBy=category&limit=20&collections=true&term=[makelist2.param2]&page=' + str(s)
+     nsource = requests.get(nurl, headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36', 'X-Auth-Token': '$doregex[getAuth]'}).text
+     source = source + nsource
+     print s
+  list = re.findall('(.*)', source)[0].replace('\\', '')
+  return re.findall('(?s)"id":(\d+),.*?"title":"(.*?)".*?"description":"(.*?)".*?image_small":"(.*?)"', list)
+]]></expres>
+<page></page>
+<agent></agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getAuth</name>
+<expres>auth_token":"([^"]+)</expres>
+<page>https://api.curiositystream.com/v1/login</page>
+<rawpost>email=gqmanvan%40gmail.com&amp;password=george44</rawpost>
+<referer>https://app.curiositystream.com/login</referer>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist4</name>
+<listrepeat><![CDATA[
+   <title>[COLOR yellow][B][makelist4.param1][/B][/COLOR]</title>
+   <link>[makelist4.param4]</link>
+   <thumbnail>[makelist4.param3]</thumbnail>
+   <info>[makelist4.param2]</info>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import requests, re
+def GetLSProData(page_data,Cookie_Jar,m,url = 'https://api.curiositystream.com/v2/series/[makelist3.param1]'):
+  headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36', 'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'deflate', 'Origin': 'https://app.curiositystream.com', 'Referer': 'https://api.curiositystream.com/v2/series/[makelist3.param1]', 'Content-Type': 'application/json', 'X-Auth-Token': '$doregex[getAuth]'}
+  source = requests.get(url, headers = headers).text
+  list = re.findall('(.*)', source)[0].replace('\\', '')
+  return re.findall('(?s)"file_name".*?"title":"(.*?)".*?"description":"(.*?)".*?image_small":"(.*?)".*?master_playlist_url":"(.*?)"', list)
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://image.roku.com/channels/images/365ec0a2359a43d386e473787c0bfa89-hd.png</thumbnail>
+<fanart>https://curiositystream.com/assets/Montage_2500x1080.jpg</fanart>
+</item>
+
+
+
+<item>
+<title>[COLOR snow][B]CURIOSIT[COLOR orange]Y[/COLOR] STREAM 2[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B][makelist.param2][/B][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):
+  list = re.findall('(.*)', page_data)[0].replace('\\', '')
+  return re.findall('"name":"(.*?)".+?label":"(.*?)","image_url":"(.*?)"', list)
+]]></expres>
+<page>https://api.curiositystream.com/v1/categories</page>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][B][makelist2.param2][/B][/COLOR]</title>
+  <link>$doregex[makelist3]</link>
+  <thumbnail>[makelist2.param4]</thumbnail>
+  <info>[makelist2.param3]</info>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import requests, re
+def GetLSProData(page_data,Cookie_Jar,m):
+  url = 'https://api.curiositystream.com/v1/media?filterBy=category&limit=20&collections=true&term=[makelist.param1]&page=1'
+  source = requests.get(url, headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}).text
+  total_pages = re.findall('"total_pages":(.*?),', source)[0]
+  print total_pages
+  s = '1'
+  s= int(s)
+  while str(s) != total_pages :
+     s = s + 1
+     nurl= 'https://api.curiositystream.com/v1/media?filterBy=category&limit=20&collections=true&term=[makelist.param1]&page=' + str(s)
+     nsource = requests.get(nurl, headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36', 'X-Auth-Token': '$doregex[getAuth]'}).text
+     source = source + nsource
+     print s
+  list = re.findall('(.*)', source)[0].replace('\\', '')
+  return re.findall('(?s)"id":(\d+),.*?"title":"(.*?)".*?"description":"(.*?)".*?image_small":"(.*?)"', list)
+
+]]></expres>
+<page></page>
+<agent></agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getAuth</name>
+<expres>auth_token":"([^"]+)</expres>
+<page>https://api.curiositystream.com/v1/login</page>
+<rawpost>email=gqmanvan%40gmail.com&amp;password=george44</rawpost>
+<referer>https://app.curiositystream.com/login</referer>
+<agent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+   <title>[COLOR yellow][B][makelist3.param1][/B][/COLOR]</title>
+   <link>[makelist3.param4]</link>
+   <thumbnail>[makelist3.param3]</thumbnail>
+   <info>[makelist3.param2]</info>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import requests, re
+def GetLSProData(page_data,Cookie_Jar,m,url = 'https://api.curiositystream.com/v2/series/[makelist2.param1]'):
+  headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36', 'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'deflate', 'Origin': 'https://app.curiositystream.com', 'Referer': 'https://api.curiositystream.com/v2/series/[makelist2.param1]', 'Content-Type': 'application/json', 'X-Auth-Token': '$doregex[getAuth]'}
+  source = requests.get(url, headers = headers).text
+  list = re.findall('(.*)', source)[0].replace('\\', '')
+  return re.findall('(?s)"file_name".*?"title":"(.*?)".*?"description":"(.*?)".*?image_small":"(.*?)".*?master_playlist_url":"(.*?)"', list)
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://media.glassdoor.com/sqll/1255161/curiositystream-squarelogo-1458930295802.png</thumbnail>
+<fanart>https://curiositystream.com/assets/Montage_2500x1080.jpg</fanart>
+</item>
+
+
+
+<i#tem>
+<title>[COLOR snow][B]TES[COLOR orange]T[/COLOR][/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR orange][B] [makelist.param1][/B][/COLOR]</title>
+  <link>[makelist.param3]|User-Agent=iPad</link>
+  <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re, base64
+def GetLSProData(page_data,Cookie_Jar,m):
+  list_encoded = re.findall('<title>(.*?)</', page_data)
+  for e in list_encoded:
+      decoded = base64.b64decode(e)
+      page_data = page_data.replace(e, decoded)
+  return re.findall('<channel><title>(.*?)</.+?\[CDATA\[(h.*?)\].+?\[CDATA\[(h.*?)\]', page_data)
+]]></expres>
+<page>$doregex[getID]</page>
+</regex>
+<regex>
+<name>getID</name>
+<expres>$pyFunction:base64.b64decode("aHR0cDovL29rMi5zZTo4MDAwL2VuaWdtYTIucGhwP3VzZXJuYW1lPTI4MDgzZ3FtYW52YW4mcGFzc3dvcmQ9MzUxMTMmdHlwZT1nZXRfbGl2ZV9zdHJlYW1zJmNhdF9pZD0w")</expres>
+<page></page>
+</regex>
+</item>
+
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow] (LV)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] TV STREAMS[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+   <title>[COLOR white][B] [makelist.param1][/B][/COLOR]</title>
+  <link>[makelist.param3]</link>
+  <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import re, base64
+ list_encoded = re.findall('<title>(.*?)</', page_data)
+ for e in list_encoded:
+     decoded = base64.b64decode(e)
+     page_data = page_data.replace(e, decoded)
+ return re.findall('<channel><title>(.*?)</.+?\[CDATA\[(h.*?)\].+?\[CDATA\[(h.*?)\]', page_data)
+]]></expres>
+<page>$doregex[getID]</page>
+</regex>
+<regex>
+<name>getID</name>
+<expres>$pyFunction:base64.b64decode("aHR0cDovL29rMi5zZTo4MDAwL2VuaWdtYTIucGhwP3VzZXJuYW1lPTI4MTcxZ3FtYW52YW4mcGFzc3dvcmQ9MzA0OTEmdHlwZT1nZXRfbGl2ZV9zdHJlYW1zJmNhdF9pZD0w")</expres>
+<page></page>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow] (LV)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] SPORTS[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B] [makelist.param1][/B][/COLOR]</title>
+  <link>[makelist.param3]m3u8|User-Agent=iPad</link>
+  <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import re, base64
+ list_encoded = re.findall('<title>(.*?)</', page_data)
+ for e in list_encoded:
+     decoded = base64.b64decode(e)
+     page_data = page_data.replace(e, decoded)
+ return re.findall('<channel><title>(.*?)</.+?\[CDATA\[(h.*?)\].+?\[CDATA\[(h.*?)ts', page_data)
+]]></expres>
+<page>$doregex[getID]</page>
+</regex>
+<regex>
+<name>getID</name>
+<expres>$pyFunction:base64.b64decode("aHR0cDovL29rMi5zZTo4MDAwL2VuaWdtYTIucGhwP3VzZXJuYW1lPTI4MTcxZ3FtYW52YW4mcGFzc3dvcmQ9MzA0OTEmdHlwZT1nZXRfbGl2ZV9zdHJlYW1zJmNhdF9pZD01")</expres>
+<page></page>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow] (LV)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] MOVIES[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B] [makelist.param1][/B][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>http://www.guidingstar.ca/movie_reel.jpg</thumbnail>
+  <fanart>https://i.ytimg.com/vi/Jj0GvJnanto/maxresdefault.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import re, base64
+ list_encoded = re.findall('<title>(.*?)</', page_data)
+ for e in list_encoded:
+     decoded = base64.b64decode(e)
+     page_data = page_data.replace(e, decoded)
+ return re.findall('(?s)channel.*?title>(.*?)</.*?CDATA\[(.*?)\]', page_data)
+]]></expres>
+<page>$doregex[getID]</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR yellow] [makelist2.param1][/COLOR]</title>
+  <link>[makelist2.param3]</link>
+  <thumbnail>[makelist2.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import re, base64
+ list_encoded = re.findall('<title>(.*?)</', page_data)
+ for e in list_encoded:
+     decoded = base64.b64decode(e)
+     page_data = page_data.replace(e, decoded)
+ return re.findall('(?s)<channel><title>(.*?)</.*?\[CDATA\[(h.*?)\].*?\[CDATA\[(h.*?)\]', page_data)
+]]></expres>
+<page>[makelist.param2]</page>
+</regex>
+<regex>
+<name>getID</name>
+<expres>$pyFunction:base64.b64decode("aHR0cDovL29rMi5zZTo4MDAwL2VuaWdtYTIucGhwP3VzZXJuYW1lPTI4MTcxZ3FtYW52YW4mcGFzc3dvcmQ9MzA0OTEmdHlwZT1nZXRfdm9kX2NhdGVnb3JpZXM=")</expres>
+<page></page>
+</regex>
+<thumbnail>https://usercontent2.hubstatic.com/8666089.jpg</thumbnail>
+<fanart>https://i.ytimg.com/vi/Jj0GvJnanto/maxresdefault.jpg</fanart>
+</item>
+
+
+<i#tem>
+<title>eclipse</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR skyblue][B] ([makelist.param1])[/B][/COLOR] [COLOR yellow][B][makelist.param2][/B][/COLOR][COLOR skyblue][B] ([makelist.param4])[/B][/COLOR]</title>
+  <link>[makelist.param3]|User-Agent=VLC</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):
+  list = re.findall('class="live_now">(?s)(.*?)class="footer"', page_data)[0]
+  return re.findall("channel_Live_Now.><.*?>(\d.*?)<.*?<now><p>(.*?)<.*\s.*link.'(.*?)'.*?'(.*?)'", list)
+]]></expres>
+<page>http://eclipse-iptv.ddns.net:25461/client_area/live.php</page>
+<referer></referer>
+<agent>Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</agent> 
+<cookieJar>$doregex[getLogin]</cookieJar>
+</regex>
+<regex>
+<name>getLogin</name>
+<expres></expres>
+<page>http://eclipse-iptv.ddns.net:25461/client_area/index.php</page>
+<referer>http://eclipse-iptv.ddns.net:25461/client_area</referer>
+<rawpost>$doregex[getData]</rawpost>
+<agent>Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</agent> 
+<noredirect>true</noredirect> 
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getData</name>
+<expres>$pyFunction:base64.b64decode("dXNlcm5hbWU9Q29uYW5kV2lsbCZwYXNzd29yZD1Gb3JHcmFuZFBhIzE=")</expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow] (EC)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] TV STREAMS 2[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR white][B] ([makelist.param1])[/B][/COLOR] [COLOR orange][B][makelist.param2][/B][/COLOR][COLOR white][B] ([makelist.param4])[/B][/COLOR]</title>
+  <link>[makelist.param3]|User-Agent=VLC</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):
+  list = re.findall('class="live_now">(?s)(.*?)class="footer"', page_data)[0]
+  return re.findall("channel_Live_Now.><.*?>(\d.*?)<.*?<now><p>(.*?)<.*\s.*link.'(.*?)'.*?'(.*?)'", list)
+]]></expres>
+<page>http://eclipse-iptv.ddns.net:25461/client_area/live.php</page>
+<referer></referer>
+<agent>Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</agent> 
+<cookieJar>$doregex[getLogin]</cookieJar>
+</regex>
+<regex>
+<name>getLogin</name>
+<expres></expres>
+<page>http://eclipse-iptv.ddns.net:25461/client_area/index.php</page>
+<referer>http://eclipse-iptv.ddns.net:25461/client_area</referer>
+<rawpost>$doregex[getData]</rawpost>
+<agent>Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04</agent> 
+<noredirect>true</noredirect> 
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getData</name>
+<expres>$pyFunction:base64.b64decode("dXNlcm5hbWU9Q29uYW5kV2lsbCZwYXNzd29yZD1Gb3JHcmFuZFBhIzE=")</expres>
+<page></page>
+</regex>
+</item>
+
+
+

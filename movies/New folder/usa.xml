@@ -1,0 +1,522 @@
+<item>
+<title>[COLOR red]_________________________UPATED 05/05/17________________________[/COLOR]</title>
+<link> </link>
+<thumbnail>https://4.bp.blogspot.com/47lVy45P4CJx6Yzzif1fi65BniLsF95E80KI0DiwyzlqD5hoAvjtIG6iXhc3BAzyIYQ=w300</thum
+bnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>NBC</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/216.m3u8&streamtype=HLSRETRY&name=NBC NEW YORK&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/wyxwxu1434505582.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+<item>
+ 
+<item>
+<title>NBC ALT</title>
+<link>http://208.86.19.123:8080/live/102.stream/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/wyxwxu1434505582.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+<item>
+
+<item>
+<title>ABC </title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/393.m3u8&streamtype=HLSRETRY&name=ABC NEW YORK&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/sqsqst1456747365.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>ABC ALT</title>
+<link>http://208.86.19.123:8080/live/104.stream/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/sqsqst1456747365.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+<item>
+
+<item>
+<title>CBS </title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/45.m3u8&streamtype=HLSRETRY&name=CBS NEW YORK&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/vruusq1434471511.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>CBS ALT</title>
+<link>http://208.86.19.13:8080/live/101.stream/index.m3u8</link>
+<thumbnail>http://www.coloneljill.com/wp-content/uploads/2013/11/cbs_logo.jpg</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>FOX </title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/365.m3u8&streamtype=HLSRETRY&name=FOX NEW YORK&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/rwptru1436892145.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+
+<item>
+<title>FOX </title>
+<link>http://163.172.81.33:1234/live/www.iptvrestream.net/eeGY0TLlU6/325.ts|User-Agent=iptvrestream.net</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/rwptru1436892145.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>My 9</title>
+<link>http://208.86.19.13:8080/live/105.stream/index.m3u8</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/vwwxus1434505559.png/medium</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+ 
+<item>
+<title>PBS WLIW</title>
+<link>http://208.86.19.13:8080/live/108.stream/index.m3u8</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/tpswqw1434505817.png/medium</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+ 
+<item>
+<title>The CW </title>
+<link>http://208.86.19.13:8080/live/106.stream/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/qspwpv1453168359.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>ION</title>
+<link>http://208.86.19.123:8080/live/109.stream/index.m3u8</link>
+<thumbnail>http://www.logotypes101.com/logos/320/EE6695D283BA85D88816EE1045CCC426/ion_logo_white_cmyk.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>CNN USA</title>
+<link>rtmp://$doregex[server]/edge playpath=cnn_live flashver=WIN\2024,0,0,221 swfUrl=http://newschat.tv/player.swf pageUrl=http://www.livenewschat.eu/top/ swfVfy=1 live=1</link>
+<regex>
+<name>server</name>
+<expres>best":"(.*?)"</expres>
+<page>http://newschat.tv/server.json</page>
+<agent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0</agent>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>http://www.thelogodb.com/images/media/logo/uyswus1433941237.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+ 
+<item>
+<title>CNN USA</title>
+<link>http://208.86.19.123:8080/live/20.stream/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/uyswus1433941237.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+ 
+<item>
+<title>CNN USA</title>
+<link>http://163.172.81.33:1234/live/www.iptvrestream.net/eeGY0TLlU6/327.ts|User-Agent=iptvrestream.net</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/uyswus1433941237.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>ABC NEWS</title>
+<link>http://abclive.abcnews.com/i/abc_live4@136330/master.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/wwxvur1466450408.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+item>
+<title>HLN News SD- Kodi 16</title>
+<sportsdevil>http://www.newzphobia.com/2013/09/get-latest-views-and-news-from-hln-live-stream/</sportsdevil>
+<referer>referer=http://www.newzphobia.com/</referer>
+<thumbnail>https://www.thelogodb.com/images/media/logo/vurruu1443638191.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>MSNBC HD</title>
+<link>http://tvemsnbc-lh.akamaihd.net/i/nbcmsnbc_1@122532/index_2596_av-b.m3u8?sd=10&rebase=on</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/utvryr1434269379.png/medium</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>FOX NEWS </title>
+<link>http://163.172.81.33:1234/live/www.iptvrestream.net/eeGY0TLlU6/340.ts|User-Agent=iptvrestream.net</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/uqqvpr1433431384.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>FOX NEWS </title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/7.m3u8&streamtype=HLSRETRY&name=FOX NEWS&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/uqqvpr1433431384.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>Bloomberg</title>
+<link>http://cdn3.videos.bloomberg.com/btv/us/master.m3u8</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/yrqxsr1433448939.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>The CW </title>
+<link>http://208.86.19.13:8080/live/106.stream/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/qspwpv1453168359.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+
+<item>
+<title>FX</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/147.m3u8&streamtype=HLSRETRY&name=FX&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/uwysvp1436890056.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>FXx</title>
+<link>http://163.172.81.33:1234/live/www.iptvrestream.net/eeGY0TLlU6/122.ts|User-Agent=iptvrestream.net</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/uvyvsx1434502420.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>TBS  </title>
+<sportsdevil>https://www.arconaitv.me/teetimebs/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail>https://www.thelogodb.com/images/media/logo/xwqwpw1434505980.png/medium</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>TNT </title>
+<link></link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/vxxpqu1469457118.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>TNT</title>
+<link>http://208.86.19.13:8080/live/16.stream/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/vxxpqu1469457118.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>TRU TV</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/219.m3u8&streamtype=HLSRETRY&name=TRUtv&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/swvxpp1434031248.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>SPIKE </title>
+<sportsdevil>https://www.arconaitv.me/pointytv/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail>http://www.thelogodb.com/images/media/logo/wqqvyq1433967407.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item> 
+
+<item>
+<title>SPIKE </title>
+<link></link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/wqqvyq1433967407.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>SYFY NETWORK</title>
+<link>http://163.172.81.33:1234/live/www.iptvrestream.net/eeGY0TLlU6/122.ts|User-Agent=iptvrestream.net</link>
+<thumbnail></thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>SYFY NETWORK</title>
+<sportsdevil>https://www.arconaitv.me/sify/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail></thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+ 
+<item>
+<title>COMEDY CENTRAL</title>
+<sportsdevil>https://www.arconaitv.me/funnybone/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail>http://www.thelogodb.com/images/media/logo/wvsprt1433941265.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>USA Network</title>
+<link>http://208.86.19.123:8080/live/11.stream/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/syytuy1467823090.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>USA Network</title>
+<link>http://163.172.81.33:1234/live/www.iptvrestream.net/eeGY0TLlU6/336.ts|User-Agent=iptvrestream.net</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/syytuy1467823090.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>BRAVO</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/318.m3u8&streamtype=HLSRETRY&name=BRAVO&maxbitrate=0&Buffer=20971520</link>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>Bravo</title>
+<sportsdevil>https://www.arconaitv.me/braveotv/</sportsdevil>
+<referer>referer=https://www.arconaitv.me/</referer>
+<agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.1439</agent>
+<thumbnail>http://www.thelogodb.com/images/media/logo/ssywwv1433449119.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>A&E</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/146.m3u8&streamtype=HLSRETRY&name=A&E&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/xyuqsu1435097077.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>A&E</title>
+<link>http://163.172.81.33:1234/live/www.iptvrestream.net/eeGY0TLlU6/332.ts|User-Agent=iptvrestream.net</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/xyuqsu1435097077.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>AMC</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/163.m3u8&streamtype=HLSRETRY&name=AMC&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/txvtyy1441049730.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+
+<item>
+<title>AMC</title>
+<sportsdevil>https://www.arconaitv.me/am/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail>http://www.thelogodb.com/images/media/logo/txvtyy1441049730.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>Lifetime</title>
+<sportsdevil>https://www.arconaitv.me/lt/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail>http://vignette1.wikia.nocookie.net/deviousmaids/images/b/bc/Lifetime_Logo.png/revision/latest?cb=20140216020400</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>LMN</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/391.m3u8&streamtype=HLSRETRY&name=LMN&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://3.bp.blogspot.com/_Ywrv8nOPKns/SiyjE6j597I/AAAAAAAAATo/yVgmk7Kh4jc/s320/LMN.jpg</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>BET</title>
+
+<thumbnail>https://www.thelogodb.com/images/media/logo/usxvry1434468747.png/medium</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>CARTOON NETWORK</title>
+
+<thumbnail>http://cf.juggle-images.com/matte/white/280x280/cartoon-network-hd-logo-primary.jpg</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>CARTOON NETWORK</title>
+<sportsdevil>https://www.arconaitv.me/cn/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail>http://cf.juggle-images.com/matte/white/280x280/cartoon-network-hd-logo-primary.jpg</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>Nick Toons</title>
+<link>http://208.86.19.13:8080/live/15.stream/index.m3u8</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/xqusqy1433966114.png/medium</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>Nick Jr</title>
+<link></link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/ttwuwy1444920780.png/medium</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>Nick HD</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/218.m3u8&streamtype=HLSRETRY&name=NICKELODEON&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>https://www.thelogodb.com/images/media/logo/turwts1438374001.png/medium</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>FREEFORM</title>
+<link>http://208.86.19.13:8080/live/27.stream/index.m3u8</link>
+<thumbnail>https://pmcdeadline2.files.wordpress.com/2016/01/freeform2.png?w=594</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>Destination America</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/308.m3u8&streamtype=HLSRETRY&name=DESTINATION AMERICA&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://disneycruiselineblog.com/wp-content/uploads/2013/04/DestinationAmerica_Logo.jpg</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>INSIGHT HD 1080p</title>
+<link>http://ooyalahd2-f.akamaihd.net/i/intv02_delivery@346464/index_5128_av-b.m3u8?sd=10&rebase=on</link>
+<thumbnail>http://www.tern-international.tv/assets/uploads/2016/09/footerlogo-insight.png</thumbnail>
+<fanart>https://i.ytimg.com/vi/h_Sldf6XZ1c/maxresdefault.jpg</fanart>
+</item>
+
+<item>
+<title>INSIGHT HD 720p</title>
+<link>http://ooyalahd2-f.akamaihd.net/i/intv02_delivery@346464/index_2528_av-b.m3u8?sd=10&rebase=on</link>
+<thumbnail>http://www.tern-international.tv/assets/uploads/2016/09/footerlogo-insight.png</thumbnail>
+<fanart>https://i.ytimg.com/vi/h_Sldf6XZ1c/maxresdefault.jpg</fanart>
+</item>
+
+
+<item>
+<title>DIY NETWORK HD</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/27.m3u8&streamtype=HLSRETRY&name=DIY NETWORK&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/052016/untitled-1_241.png?itok=SoUhGGwX</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>HGTV</title>
+<sportsdevil>http://www.shadow-net.org/channels/HGTV.html</sportsdevil>
+<referer>http://www.shadow-net.org/</referer>
+<thumbnail>https://www.thelogodb.com/images/media/logo/yusqqu1444656884.png/medium</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+item>
+<title>FOOD NETWORK</title>
+<link></link>
+<thumbnail>http://fromagination.com/wp-content/uploads/2015/02/Food-Network-logo.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>COOKING</title>
+<link></link>
+<thumbnail>https://pbs.twimg.com/profile_images/707608054225833984/0oB_sFGh.jpg</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>HISTORY</title>
+<sportsdevil>https://www.arconaitv.me/hc/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail>http://www.thelogodb.com/images/media/logo/wxyrrw1433944455.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>HISTORY 2</title>
+
+<thumbnail>http://www.thelogodb.com/images/media/logo/wxyrrw1433944455.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+item>
+<title>TLC</title>
+<link></link>
+<thumbnail>http://filmescape.com/wp-content/uploads/2014/02/TLC.jpg</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+
+<item>
+<title>ANIMAL PLANET</title>
+<sportsdevil>https://www.arconaitv.me/ap/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail>http://www.thelogodb.com/images/media/logo/xpttwp1433424253.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>DISCOVERY CHANNEL</title>
+<link>http://208.86.19.13:8080/live/31.stream/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/usvxwq1433945505.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+
+<item>
+<title>DISCOVERY CHANNEL</title>
+<sportsdevil>https://www.arconaitv.me/disco/</sportsdevil>
+<referer>https://www.arconaitv.me/</referer>
+<thumbnail>http://www.thelogodb.com/images/media/logo/usvxwq1433945505.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+item>
+<title>DISCOVERY VELOCITY</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&name=VELOCITY&url=http://dns1.theplayersklub.host:2095/live/dimitrology/dimitrology//646.ts</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/ysysuu1434506168.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+item>
+<title>DISCOVERY SCIENCE</title>
+<link>http://199.21.149.125:8888/US_DISCOVERY_SCIENCE_HD/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/wwyqwt1462874376.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+ 
+<item>
+<title>NATIONAL GEOGRAPHIC</title>
+
+<thumbnail>http://www.thelogodb.com/images/media/logo/vsuwwu1436891071.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item
+
+<item>
+<title>NAT GEO WILD</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/306.m3u8&streamtype=HLSRETRY&name=NAT GEO WILD&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/ypptyq1433943719.png</thumbnail>
+</item>
+
+<item>
+<title>INVESTIGATION DISCOVERY</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/241.m3u8&streamtype=HLSRETRY&name=ID&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/uxxupw1444920353.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+<item>
+<title>CRIME/INVESTIGATION</title>
+<link>plugin://plugin.video.f4mTester/?url=http://p1.iptvprivateserver.tv/live/653270232840/653270232840/124.m3u8&streamtype=HLSRETRY&name=C/I&maxbitrate=0&Buffer=20971520</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/uxxupw1444920353.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>
+
+item>
+<title>TRAVEL CHANNEL</title>
+<link>http://199.21.149.125:8888/US_TRAVEL_CHANNEL_HD/index.m3u8</link>
+<thumbnail>http://www.thelogodb.com/images/media/logo/uuwqyv1444921041.png</thumbnail>
+<fanart>http://www.pngall.com/wp-content/uploads/2016/05/America-Flag-PNG-Picture.png</fanart>
+</item>

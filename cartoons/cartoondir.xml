@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>Karnage</layoutype>
+<fanart>http://karnage.dark-avengers.com/images/fanarts/karfan.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+
+<items>
+
+<dir>
+    <name>[COLOR white]LEGAL DISCLAIMER:[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<dir>
+    <name>[COLOR red]karnage[/COLOR] [COLOR white]third party addon does not host, provide, archive, store, or distribute media of any kind. karnage acts merely as an index (or directory) of media posted by other enthusiasts on the internet, which is completely out of the control of karnage.
+karnage RESPECTS THE RIGHTS OF OTHERS, AND PROHIBITS THE USE OF REFERENCED MATERIAL FOR ANY PURPOSE OTHER THAN THAT FOR WHICH IT IS INTENDED (WHERE SUCH USE IS LAWFUL AND FREE OF CIVIL LIABILITY OR OTHER CONSTRAINT) AND IN SUCH CIRCUMSTANCES WHERE POSSESSION OF SUCH MATERIAL MAY HAVE ANY ADVERSE FINANCIAL, PREJUDICIAL OR ANY OTHER EFFECT ON ANY OTHER THIRD PARTY.[/COLOR]</name>
+    <link></link>
+    <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</dir>
+
+<item>
+<name>[COLOR red]cartoons[/COLOR]</name>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+<link>$doregex[dir]</link>
+<regex>
+<name>dir</name>
+<listrepeat>dir</listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = 'http://ktxts.dark-avengers.com/cartoons/cartoon1.xml'):
+    from resources.lib.modules import control
+    if not control.infoLabel('Container.PluginName') == 'plugin.video.Karnage': return
+    from resources.lib.indexers import Karnage
+    Karnage.indexer().get(url)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<title>mixed movies for kids</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://dl.funsaber.net/animation/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|avi|mp4])">(.*?)\.(?:720p|1080p|BDRip)]]></expres>
+<page>http://dl.funsaber.net/animation</page>
+</regex>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</item>
+
+<plugin>
+<name> [COLOR red]more toon movies some dubbed [/COLOR]</name>
+<link>http://dl.funsaber.net/animation/95/11/</link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<name> [COLOR red]even more toon movies some dubbed [/COLOR]</name>
+<link>http://dl.funsaber.net/animation/95/12/</link>
+<thumbnail>http://karnage.dark-avengers.com/images/icons/karicon.jpg</thumbnail>
+</plugin>
+
+</item>
+

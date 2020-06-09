@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>fuckOFF</layoutype>
+<fanart>https://s20.postimg.org/lxjjs1nsd/fanart.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+
+<dir>
+    <name>[COLOR white]Movies[/COLOR]</name>
+    <link>http://bit.ly/nnm1080p</link>
+    <thumbnail>https://s14.postimg.org/fb7txofzl/warner_bros_logo2.png</thumbnail>
+</dir>
+
+<dir>
+    <name>[COLOR white]BoxSets[/COLOR]</name>
+    <link>http://bit.ly/2sel9xa</link>
+    <thumbnail>https://s20.postimg.org/7xxwkpuel/boxsets.png</thumbnail>
+</dir>
+
+<dir>
+    <name>[COLOR white]AK-47 Movies[/COLOR]</name>
+    <link>http://bit.ly/nnak47m</link>
+    <thumbnail>https://s14.postimg.org/fb7txofzl/warner_bros_logo2.png</thumbnail>
+</dir>
+
+<item>
+<title> [COLOR mediumpurple]Movies Collection 1[/COLOR] [COLOR red](720p|1080p)[/COLOR]</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://dl.my-film.in/reza/film/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>https://s20.postimg.org/ett4d9mwd/imageedit_5_7934025447.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://dl.my-film.in/reza/film/</page>
+</regex>
+<thumbnail>https://s20.postimg.org/ett4d9mwd/imageedit_5_7934025447.png</thumbnail>
+</item>
+
+<item>
+<title> [COLOR mediumpurple]Movies Collection 2[/COLOR] [COLOR red](720p|1080p)[/COLOR]</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://dl.tehmovies.org/94/95/9/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>https://s20.postimg.org/ett4d9mwd/imageedit_5_7934025447.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://dl.tehmovies.org/94/95/9/</page>
+</regex>
+<thumbnail>https://s20.postimg.org/ett4d9mwd/imageedit_5_7934025447.png</thumbnail>
+</item>
+
+<item>
+<title> [COLOR mediumpurple]Movies Collection 3[/COLOR] [COLOR red](720p|1080p[/COLOR])</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://dl2.downloado.site/dl2/Movie/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>https://s20.postimg.org/ett4d9mwd/imageedit_5_7934025447.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:720p|1080p)]]></expres>
+<page>http://dl2.downloado.site/dl2/Movie/</page>
+</regex>
+<thumbnail>https://s20.postimg.org/ett4d9mwd/imageedit_5_7934025447.png</thumbnail>
+</item>
+
+<item>
+<title> [COLOR mediumpurple]Movies Collection 4[/COLOR] [COLOR red](2160p|1080p)[/COLOR]</title>
+<link>$doregex[hd]</link>
+<regex>
+<name>hd</name>
+<listrepeat><![CDATA[
+   <title>[COLOR red][hd.param3][/COLOR] [COLOR white]([hd.param1])[/COLOR]</title>
+   <link>http://dl.my-film.in/reza/film/[hd.param3].[hd.param1][hd.param2]</link>
+   <thumbnail>https://s20.postimg.org/ett4d9mwd/imageedit_5_7934025447.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href.*?(\d{3,4}p)(.+?[mkv|mp4])">(.*?)\.(?:2160p|1080p)]]></expres>
+<page>http://dl.my-film.in/reza/film/</page>
+</regex>
+<thumbnail>https://s20.postimg.org/ett4d9mwd/imageedit_5_7934025447.png</thumbnail>
+</item>
+
+<plugin>
+<name> [COLOR mediumpurple]Movies Collection 5[/COLOR]</name>
+<link>http://s1.bia2sv.in/Movies/Archive/2016/</link>
+<thumbnail>https://pbs.twimg.com/profile_images/632550903829143553/l1mcM8bL.png</thumbnail>
+</plugin>
+
+<dir>
+    <name>[COLOR white]Holdays Movies[/COLOR]</name>
+    <link>http://bit.ly/n0n4xm45</link>
+    <thumbnail>https://s20.postimg.org/ti50w7y5p/christmas.png</thumbnail>
+</dir>
+
+<plugin>
+    <name>[COLOR white]x265 Movies[/COLOR]</name>
+    <link>http://avadl.uploadet.ir/DL7/Film/X265/</link>
+    <thumbnail>https://s14.postimg.org/fb7txofzl/warner_bros_logo2.png</thumbnail>
+</plugin>
+
+<plugin>
+    <name>[COLOR white]New Collection[/COLOR]</name>
+    <link>http://dl.tehmovies.org/94/95/9/</link>
+    <thumbnail>http://www.mymovies.dk/media/33271/mymoviesicon.png</thumbnail>
+</plugin>
+
+<dir>
+    <name>[COLOR red][B]+18 Only Movies[/B][/COLOR]</name>
+    <link>http://bit.ly/nonam18</link>
+    <thumbnail>http://www.ecblendflavors.com/product_images/uploaded_images/under-18-type-1.png</thumbnail>
+</dir>

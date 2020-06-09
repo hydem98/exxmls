@@ -1,0 +1,282 @@
+
+
+<dir>
+    <name>A Nightmare On Elm Street</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/zPdMcikD993AQRd92iNv0Dxb67T.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/elmstreet.xml</link>
+</dir>
+<dir>
+    <name>Alien</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/2h00HrZs89SL3tXB4nbkiM7BKHs.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/alien.xml</link>
+</dir>
+<dir>
+    <name>Alvin And The Chipmunks</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/Lg83xE4X2EBiXkA1ZCu6dFOjSx.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/chipmunks.xml</link>
+</dir>
+<dir>
+    <name>American Pie</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/k40WFAXMRekWEqsjURO3jiWob67.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/americanpie.xml</link>
+</dir>
+<dir>
+    <name>Back To The Future</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/pTpxQB1N0waaSc3OSn0e9oc8kx9.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/b2thefuture.xml</link>
+</dir>
+<dir>
+    <name>Beverly Hills Cop</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/s7n0rS2Ff85SuSpqYG3ndkmdQf4.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/bevhills.xml</link>
+</dir>
+<dir>
+    <name>Bourne</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/aU1PY270BTBUXwAZhgRR2TMUX4u.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/bourne.xml</link>
+</dir>
+<dir>
+    <name>Bridget Jones</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/cFOUe33kvlKq6hRPTgm59CJwlRN.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/bridgetjones.xml</link>
+</dir>
+<dir>
+    <name>Carry On</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/bFItvUskMaI7xH7xWiCizddBMIv.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/carryon.xml</link>
+</dir>
+<dir>
+    <name>Childs Play</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/dSX9i2buibfyKFRpK2kOe6rtl5R.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/chucky.xml</link>
+</dir>
+<dir>
+    <name>Chronicles Of Narnia</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/l8RKDgjl9co0IgFZblxhtIOi5Uj.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/lionwitch.xml</link>
+</dir>
+<dir>
+    <name>Dark Knight</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/darkknight.xml</link>
+</dir>
+<dir>
+    <name>Despicable Me</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/4zHJhBSY4kNZXfhTlmy2TzXD51M.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/minions.xml</link>
+</dir>
+<dir>
+    <name>Die Hard</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/mc7MubOLcIw3MDvnuQFrO9psfCa.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/diehard.xml</link>
+</dir>
+<dir>
+    <name>Dirty Harry</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/6AlKDmfVi5cqQFprxJCf1FWihPk.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/dirtyharry.xml</link>
+</dir>
+<dir>
+    <name>Divergent</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/yTtx2ciqk4XdN1oKhMMDy3f5ue3.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/divergent.xml</link>
+</dir>
+<dir>
+    <name>Fast And Furious</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/ft8IqAGFs3V7i87z0t0EVRUjK1p.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/fastfurious.xml</link>
+</dir>
+<dir>
+    <name>Final Destination</name>
+    <thumbnail>https://image.tmdb.org/t/p/w200_and_h300_bestv2/nW6JfCIWqUpIESlras0nrVy4pCl.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/finaldestination.xml</link>
+</dir>
+<dir>
+    <name>Friday 13th</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/mGJlh8oMyTDhfudvs20kFpYz0Yc.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/fri13th.xml</link>
+</dir>
+<dir>
+    <name>Halloween</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/9CPYBA1Fq5BdCmViSPyfPiBOcTH.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/halloween.xml</link>
+</dir>
+<dir>
+    <name>Harry Potter</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/dCtFvscYcXQKTNvyyaQr2g2UacJ.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/potter.xml</link>
+</dir>
+<dir>
+    <name>Hellraiser</name>
+    <thumbnail>https://image.tmdb.org/t/p/w200_and_h300_bestv2/4nfAhOTlfZUHNorHJXEib7GYFpp.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/hellraiser.xml</link>
+</dir>
+<dir>
+    <name>Highlander</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/6l4t1vWAFMuAiOpDT0mDWlrr5Mp.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/highlander.xml</link>
+</dir>
+<dir>
+    <name>Home Alone</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/8IWPBT1rkAaI8Kpk5V3WfQRklJ7.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/homealone.xml</link>
+</dir>
+<dir>
+    <name>Hostel</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/zF3pEs1CUbjPgioxDH4h2MEHsWl.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/hostel.xml</link>
+</dir>
+<dir>
+    <name>Jack Ryan</name>
+    <thumbnail>https://image.tmdb.org/t/p/w200_and_h300_bestv2/jBibISmRBUO35p0Picv0nOo33sc.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/jackryan.xml</link>
+</dir>
+<dir>
+    <name>James Bond</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/nFeJkJbZ5lT9vmsQFnAF3m4tMjz.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/jamesbond.xml</link>
+</dir>
+<dir>
+    <name>Jurassic Park</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/c414cDeQ9b6qLPLeKmiJuLDUREJ.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/jurassicpark.xml</link>
+</dir>
+<dir>
+    <name>Laurel And Hardy</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/wg1GzfL2JuvWo2yKWP7s5S2rNiw.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/laurelandhardy.xml</link>
+</dir>
+<dir>
+    <name>Lethal Weapon</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/r4njF5h9IN0y1ZKFP1hYFmZU3Rk.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/lethal.xml</link>
+</dir>
+<dir>
+    <name>Paranormal Activity</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/ns7J1iMSDs5UkEVjMXLPiss7Lrt.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/paranormalact.xml</link>
+</dir>
+<dir>
+    <name>Pink Panther</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/t1U8cBffnrAAt3p0DB2NiwPhg0f.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/pinkpanther.xml</link>
+</dir>
+<dir>
+    <name>Pirates Of The Caribbean</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/tkt9xR1kNX5R9rCebASKck44si2.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/potc.xml</link>
+</dir>
+<dir>
+    <name>Pokemon</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/aalTziefHGUVLg44iyWS8B7ee5u.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/pokemon.xml</link>
+</dir>
+<dir>
+    <name>Police Academy</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/J1UDZYfVaLJjoIfw0VDmpBZ2Sm.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/policeacademy.xml</link>
+</dir>
+<dir>
+    <name>Poltergeist</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/fWOPN0XBvHXFYr3RsPr74qBge2I.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/poltergeist.xml</link>
+</dir>
+<dir>
+    <name>Porky's</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/yfwbpCll3RBxJmixrZvpc2NaqQY.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/porkys.xml</link>
+</dir>
+<dir>
+    <name>Predator</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/bj7A0teF2TWxxNGZjWTXiGrvCu2.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/predator.xml</link>
+</dir>
+<dir>
+    <name>Puppet Master</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/3gMXTOSlpNDfiZ659w19HW8roZ7.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/puppetmaster.xml</link>
+</dir>
+<dir>
+    <name>Rambo</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/ec1m7YgBYb4os06OSNW3QBaNYqZ.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/rambo.xml</link>
+</dir>
+<dir>
+    <name>Resident Evil</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/fttmSgLEOdBNwQepW2lC6t0mbOm.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/residentevil.xml</link>
+</dir>
+<dir>
+    <name>Robocop</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/gtGreTdzYBuQsEwTliEFdTzPleV.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/robocop.xml</link>
+</dir>
+<dir>
+    <name>Rocky</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/9TUR3s1PMJHwDRbpm7PWQ0S7IRy.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/rocky.xml</link>
+</dir>
+<dir>
+    <name>Saw</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/dHYvIgsax8ZFgkz1OslE4V6Pnf5.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/saw.xml</link>
+</dir>
+<dir>
+    <name>Scary Movie</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/bvVmVFBVQLytK1H4TJTFdnhvf4T.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/scarymovie.xml</link>
+</dir>
+<dir>
+    <name>Scream</name>
+    <thumbnail>https://image.tmdb.org/t/p/w200_and_h300_bestv2/ewi7gYW22t8T3piRvrXO73GlzuL.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/scream.xml</link>
+</dir>
+<dir>
+    <name>Star Trek</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/3ATqzWYDbWOV2RBLWNwA43InT60.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/startrek.xml</link>
+</dir>
+<dir>
+    <name>Star Wars</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/tvSlBzAdRE29bZe5yYWrJ2ds137.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/starwars.xml</link>
+</dir>
+<dir>
+    <name>Superman</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/rLTdj7oB9oxsYwuweeglWRzRng7.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/superman.xml</link>
+</dir>
+<dir>
+    <name>Taken</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/3zlffXmo7QpVBc17QIJWrRfasVr.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/taken.xml</link>
+</dir>
+<dir>
+    <name>Teenage Mutant Ninja Turtles</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/oDL2ryJ0sV2bmjgshVgJb3qzvwp.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/tmnt.xml</link>
+</dir>
+<dir>
+    <name>The Godfather</name>
+    <thumbnail>https://image.tmdb.org/t/p/w200_and_h300_bestv2/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/thegodfather.xml</link>
+</dir>
+<dir>
+    <name>The Terminator</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/q8ffBuxQlYOHrvPniLgCbmKK4Lv.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/terminator.xml</link>
+</dir>
+<dir>
+    <name>Transformers</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/bgSHbGEA1OM6qDs3Qba4VlSZsNG.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/transformers.xml</link>
+</dir>
+<dir>
+    <name>Wrong Turn</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/kyn0ZC8tvLWuKN85mhlG1lwB1WQ.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/wrongturn.xml</link>
+</dir>
+<dir>
+    <name>X-Men</name>
+    <thumbnail>https://image.tmdb.org/t/p/w640/k01Q6ATbfzNJgw4Zuoj0LTY3T9x.jpg</thumbnail>
+    <link>http://c.brosgit.pro/COBRA11/addons/noname/movie/boxset/xmen.xml</link>
+</dir>

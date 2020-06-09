@@ -1,0 +1,194 @@
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow] (RS)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] TV TEST USA[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][B][makelist.param1][/B][/COLOR]</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&amp;url=$doregex[getUrl]&amp;name=[makelist.param1]</link>
+]]></listrepeat>
+<expres>INF.{4}(USA.*).*\s(.*?)\s</expres>
+<page>http://iptvfree1.com:6969/get.php?username=gqmanvan@gmail.com&amp;password=qSIuvzHqLu&amp;type=m3u&amp;output=ts</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres>$pyFunction:urllib.quote_plus('[makelist.param2]|User-Agent=VLC/2.2.1 LibVLC/2.2.17&amp;Icy-MetaData=1')</expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow] (RS)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] TV TEST CA[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][B][makelist.param1][/B][/COLOR]</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&amp;url=$doregex[getUrl]&amp;name=[makelist.param1]</link>
+]]></listrepeat>
+<expres>INF.{4}(CA.*).*\s(.*?)\s</expres>
+<page>http://iptvfree1.com:6969/get.php?username=gqmanvan@gmail.com&amp;password=qSIuvzHqLu&amp;type=m3u&amp;output=ts</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres>$pyFunction:urllib.quote_plus('[makelist.param2]|User-Agent=VLC/2.2.1 LibVLC/2.2.17&amp;Icy-MetaData=1')</expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow] (IM)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] ALL CHANNELS[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+      <title>[COLOR red][B]IGNITE TV[/B][B][COLOR white] [makelist.param1][/B][/COLOR]</title>
+      <link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=[makelist.param2]</link>
+      <thumbnail>NA</thumbnail>
+]]></listrepeat>
+<expres>tvg-name="(.*?)".*\s(.*)\s*</expres>
+<page>http://192.99.66.185:8000/get.php?username=gqmanvan&amp;password=davemaster123&amp;type=m3u_plus&amp;output=hls</page>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow] (IM)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] US & UK[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+      <title>[COLOR red][B]IGNITE[COLOR orange][B] [makelist.param1][/COLOR] | [COLOR white][makelist.param2][/B][/COLOR]</title>
+      <link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=[makelist.param3]</link>
+      <thumbnail>NA</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[group-title="(U.*)",(.*).*\s(.*)\s*]]></expres>
+<page>http://192.99.66.185:8000/get.php?username=gqmanvan&amp;password=davemaster123&amp;type=m3u_plus&amp;output=hls</page>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow] (IM)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] LIVE EVENTS[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+      <title>[COLOR red][B]IGNITE[COLOR orange][B] [makelist.param1][/COLOR] | [COLOR white][makelist.param2][/B][/COLOR]</title>
+      <link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=[makelist.param3]</link>
+      <thumbnail>NA</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[group-title="(Live.*)",(.*).*\s(.*)\s*]]></expres>
+<page>http://192.99.66.185:8000/get.php?username=gqmanvan&amp;password=davemaster123&amp;type=m3u_plus&amp;output=hls</page>
+</regex>
+</item>
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow][B] (SS)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] ALL CHANNELS[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR yellow] [makelist.param3][/COLOR]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>http://guide.smoothstreams.tv/assets/images/channels/[makelist.param1].png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[_id":"(\d+)","name":"(\d+).-.(.*?)",(?s)(.*?)\{"channel]]></expres>
+<page>http://speed.guide.smoothstreams.tv/feed.json</page>
+<agent>Smoothstreams.tv/0.8.2 (Kodi 16.1 Git:20160424-c327c53; Windows AMD64) Windows</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][B] [makelist2.param1][/COLOR] - [COLOR orange][B]([makelist2.param2])[/B][/COLOR]</title>
+<link>$doregex[makelist3]</link>
+<thumbnail>http://guide.smoothstreams.tv/assets/images/channels/[makelist.param1].png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[name":"(.*?)".+?time":"(.*?)".+?version":(?s)(.*?)language]]></expres>
+<page>[makelist.param4]</page>
+<agent>Smoothstreams.tv/0.8.2 (Kodi 16.1 Git:20160424-c327c53; Windows AMD64) Windows</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>gethash</name>
+<expres>hash":"([^"]+)</expres>
+<page>http://auth.smoothstreams.tv/hash_api.php?site=viewms&amp;username=gqmanvan&amp;password=123followme</page>
+<referer>http://auth.smoothstreams.tv</referer>
+<agent>Smoothstreams.tv/0.8.2 (Kodi 16.1 Git:20160424-c327c53; Windows AMD64) Windows</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+<title>[COLOR yellow] [makelist2.param1][/COLOR] - [COLOR skyblue][makelist3.param2][/COLOR]</title>
+<link>http://dNA.SmoothStreams.tv:9100/viewms/ch[makelist3.param1]q1.stream/playlist.m3u8?wmsAuthSign=$doregex[gethash]|User-Agent=Smoothstreams.tv/0.8.2 (Kodi 16.1 Git:20160424-c327c53; Windows AMD64) Windows</link>
+<thumbnail>http://guide.smoothstreams.tv/assets/images/channels/[makelist.param1].png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[(\d+)\s(\(.+?\))]]></expres>
+<page>[makelist2.param3]</page>
+<agent>Smoothstreams.tv/0.8.2 (Kodi 16.1 Git:20160424-c327c53; Windows AMD64) Windows</agent>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>[COLOR green][B]ONLINE[COLOR yellow][B] (MM)[COLOR green] :[/B][/COLOR][COLOR red][B]  IGNITE[/B][COLOR white][B] ALL CHANNELS[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][B] [makelist.param2][/B][/COLOR]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>http://guide.smoothstreams.tv/assets/images/channels/[makelist.param1].png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[_id":"(\d+)"."name".+?-.(.*?)"(?s)(.*?)\{"channel]]></expres>
+<page>http://speed.guide.smoothstreams.tv/feed.json</page>
+<agent>Smoothstreams.tv_0.8.2 (Kodi 16.1 Git:20160424-c327c53; Windows AMD64) Windows</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][B] [makelist2.param1][/B][/COLOR] - [COLOR orange][B]([makelist2.param2])[/B][/COLOR]</title>
+<link>$doregex[makelist3]</link>
+<thumbnail>http://guide.smoothstreams.tv/assets/images/channels/[makelist.param1].png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[name":"(.*?)".+?time":"(.*?)".+?version":(?s)(.*?)"."language]]></expres>
+<page>[makelist.param3]</page>
+<agent>Smoothstreams.tv_0.8.2 (Kodi 16.1 Git:20160424-c327c53; Windows AMD64) Windows</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][B] [makelist2.param1][/B][/COLOR] - [COLOR orange][B][makelist3.param2][/B][/COLOR]</title>
+<link>rtmp://dNA.SmoothStreams.tv:3645/viewmmasr?user_agent=Smoothstreams.tv_0.8.2%20%28Kodi%2016.1%20Git%3A20160424-c327c53%3B%20Windows%20AMD64%29%20Windows&amp;wmsAuthSign=$doregex[gethash]/ch[makelist3.param1]q1.stream swfUrl=http://www.mma-tv.net/jwplayer.flash.swf live=1 timeout=20</link>
+<thumbnail>http://guide.smoothstreams.tv/assets/images/channels/[makelist.param1].png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[(\d+)\s(\(.+?\))]]></expres>
+<page>[makelist2.param3]</page>
+<agent>Smoothstreams.tv_0.8.2 (Kodi 16.1 Git:20160424-c327c53; Windows AMD64) Windows</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>gethash</name>
+<expres>hash.+?"([^"]+)</expres>
+<page>$doregex[getdata]</page>
+<agent>Smoothstreams.tv_0.8.2 (Kodi 16.1 Git:20160424-c327c53; Windows AMD64) Windows</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getdata</name>
+<expres>$pyFunction:base64.b64decode("aHR0cDovL3d3dy5NTUEtVFYubmV0L2xvZ2luRm9ybS5waHA/dXNlcm5hbWU9R3FtYW52YW4mcGFzc3dvcmQ9TGVvVGhlTGlvbjk5JnNpdGU9dmlld21tYXNy")</expres>
+<page></page>
+</regex>
+</item>

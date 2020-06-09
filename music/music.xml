@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
+<layoutype>Karnage</layoutype>
+<fanart>http://karnage.dark-avengers.com/images/fanarts/karfan.jpg</fanart>
+<SetViewMode>1</SetViewMode>
+
+<items>
+
+<dir>
+    <name>[COLOR white]LEGAL DISCLAIMER:[/COLOR]</name>
+    <link></link>
+    <thumbnail></thumbnail>
+</dir>
+
+<dir>
+    <name>[COLOR red]karnage[/COLOR] [COLOR white]third party addon does not host, provide, archive, store, or distribute media of any kind. karnage acts merely as an index (or directory) of media posted by other enthusiasts on the internet, which is completely out of the control of karnage.
+
+karnage RESPECTS THE RIGHTS OF OTHERS, AND PROHIBITS THE USE OF REFERENCED MATERIAL FOR ANY PURPOSE OTHER THAN THAT FOR WHICH IT IS INTENDED (WHERE SUCH USE IS LAWFUL AND FREE OF CIVIL LIABILITY OR OTHER CONSTRAINT) AND IN SUCH CIRCUMSTANCES WHERE POSSESSION OF SUCH MATERIAL MAY HAVE ANY ADVERSE FINANCIAL, PREJUDICIAL OR ANY OTHER EFFECT ON ANY OTHER THIRD PARTY.[/COLOR]</name>
+    <link></link>
+    <thumbnail></thumbnail>
+</dir>
+
+<item>
+<title>[COLOR lime]Lista Streamup[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<item> <title>[COLOR hotpink][makelist.param1][/COLOR][COLOR pink]   ([makelist.param2])[/COLOR]</title> 
+<link>https://$doregex[get-response]/app/$doregex[get-id]_aac/playlist.m3u8</link>
+<regex><name>get-response</name><expres>(.*)</expres>
+<page>https://lancer.streamup.com/api/redirect/$doregex[get-id]</page></regex>
+<regex><name>get-id</name><expres>"roomSlug": "(.*?)"</expres>
+<page>http://streamup.com/[makelist.param1]</page></regex>
+<info>[makelist.param2]</info>
+<fanart>[makelist.param3]</fanart>
+<thumbnail>[makelist.param3]</thumbnail>
+</item>
+]]></listrepeat>
+<expres>play-btn" href="/(.*?)"[\w\W\s]{0,50}alt="(.*?)"[\w\W\s]{0,160}src="(.*?)"</expres>
+<page>https://streamup.com/search?q=entertainment</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<plugin>
+<name>ambient</name>
+<link>http://kingston-rp.org/mp3/ambient/</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<dir>
+    <name></name>
+    <link></link>
+    <thumbnail></thumbnail>
+</dir>
+
+<plugin>
+    <name></name>
+    <link></link>
+    <thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+    <name></name>
+    <link></link>
+    <thumbnail></thumbnail>
+</plugin>
